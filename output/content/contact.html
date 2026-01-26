@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Pilates Vita in South Kensington, London. Phone, WhatsApp, address, opening hours, and a contact form." />
+  <title>Contact | Pilates Vita</title>
+
+  <!-- Tailwind + Fonts (aligned with pilates-6-principles.html theme) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body { font-family: 'Lato', sans-serif; color:#111827; background:#fcfcfc; }
+    h1,h2,h3,h4,.serif { font-family: 'Playfair Display', serif; }
+    .hero-overlay { background: linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.62)); }
+    .smooth-scroll { scroll-behavior: smooth; }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.10), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+    input:focus, textarea:focus { outline: none; }
+  </style>
+</head>
+
+<body class="smooth-scroll antialiased selection:bg-teal-100 selection:text-teal-900">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="/" class="flex-shrink-0 flex items-center gap-2">
+          <i data-lucide="activity" class="h-6 w-6 text-teal-600"></i>
+          <span class="serif font-bold text-xl tracking-wide text-gray-900">Pilates<span class="text-teal-600">Vita</span></span>
+        </a>
+
+        <div class="hidden md:flex space-x-8">
+          <a href="/booking" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Booking</a>
+          <a href="/sessions" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Session Types</a>
+          <a href="/reviews" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Testimonials</a>
+          <a href="/certification" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Certification</a>
+          <a href="#message" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Message Us</a>
+        </div>
+
+        <div class="md:hidden">
+          <button class="text-gray-600 hover:text-teal-600" aria-label="Menu">
+            <i data-lucide="menu" class="h-6 w-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative min-h-[78vh] flex items-center justify-center text-white overflow-hidden pt-20">
+    <div class="absolute inset-0">
+      <img
+        src="https://storage.googleapis.com/imagesu/pilates/pilates2.jpg"
+        alt="Contact Pilates Vita"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <p class="text-teal-300 font-bold tracking-widest uppercase mb-4 text-sm md:text-base">South Kensington, London</p>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Contact</h1>
+      <p class="text-xl md:text-2xl font-light opacity-90 mb-10 max-w-3xl mx-auto">
+        We’re here to answer questions and help you on your Pilates journey—whether you want to book a session, learn more about our programmes, or simply talk it through.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="tel:+447833123833" class="inline-flex items-center gap-2 bg-teal-600 text-white px-7 py-3.5 rounded-full font-semibold hover:bg-teal-700 transition-all transform hover:scale-105 shadow-lg">
+          <i data-lucide="phone-call" class="h-4 w-4"></i>
+          Call
+        </a>
+        <a href="https://wa.me/447833123833" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 bg-white/10 text-white px-7 py-3.5 rounded-full font-semibold border border-white/25 hover:bg-white/15 transition-all">
+          <i data-lucide="message-circle" class="h-4 w-4"></i>
+          WhatsApp
+        </a>
+        <a href="#message" class="inline-flex items-center gap-2 bg-white text-teal-900 px-7 py-3.5 rounded-full font-semibold hover:bg-teal-50 transition-all">
+          <i data-lucide="mail" class="h-4 w-4"></i>
+          Send a Message
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Details + Map -->
+  <main class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <!-- Left: Contact Cards -->
+        <section class="lg:col-span-5 space-y-6">
+          <div class="bg-gray-50 rounded-3xl border border-gray-100 p-7 transition-all duration-300 card-hover">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Phone</p>
+                <h2 class="text-2xl font-bold text-gray-900 mt-2">+44 (0)7 833 123 833</h2>
+                <p class="text-sm text-gray-600 mt-3">
+                  Fastest way to reach us for bookings and schedule questions.
+                </p>
+              </div>
+              <div class="h-12 w-12 rounded-full bg-teal-100 flex items-center justify-center">
+                <i data-lucide="phone" class="h-6 w-6 text-teal-700"></i>
+              </div>
+            </div>
+            <div class="mt-5">
+              <a href="tel:+447833123833" class="inline-flex items-center gap-2 text-teal-700 font-semibold hover:text-teal-800">
+                Call now <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-3xl border border-gray-100 p-7 transition-all duration-300 card-hover">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-teal-600">WhatsApp</p>
+                <h2 class="text-2xl font-bold text-gray-900 mt-2">Chat on WhatsApp</h2>
+                <p class="text-sm text-gray-600 mt-3">
+                  Ideal for quick questions and availability checks.
+                </p>
+              </div>
+              <div class="h-12 w-12 rounded-full bg-teal-100 flex items-center justify-center">
+                <i data-lucide="message-circle" class="h-6 w-6 text-teal-700"></i>
+              </div>
+            </div>
+            <div class="mt-5">
+              <a href="https://wa.me/447833123833" target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-2 text-teal-700 font-semibold hover:text-teal-800">
+                Open WhatsApp <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-3xl border border-gray-100 p-7 transition-all duration-300 card-hover">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Studio Address</p>
+                <h2 class="text-2xl font-bold text-gray-900 mt-2">Pilates Vita</h2>
+                <p class="text-sm text-gray-600 mt-3">
+                  109 Gloucester Rd., South Kensington, SW7 4SS<br/>
+                  London, United Kingdom
+                </p>
+              </div>
+              <div class="h-12 w-12 rounded-full bg-teal-100 flex items-center justify-center">
+                <i data-lucide="map-pin" class="h-6 w-6 text-teal-700"></i>
+              </div>
+            </div>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a
+                href="https://www.google.com/maps?q=109+Gloucester+Road,+London+SW7+4SS"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-2 bg-white text-teal-800 px-5 py-2.5 rounded-full font-semibold border border-teal-200 hover:bg-teal-50 transition-colors"
+              >
+                Directions <i data-lucide="navigation" class="h-4 w-4"></i>
+              </a>
+              <a href="/policies"
+                 class="inline-flex items-center gap-2 bg-white text-gray-800 px-5 py-2.5 rounded-full font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+                Booking &amp; Cancellation Policy <i data-lucide="shield-check" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-teal-900 text-white rounded-3xl overflow-hidden">
+            <div class="p-8">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-teal-300 font-bold tracking-widest uppercase mb-2 text-xs">Opening Hours</p>
+                  <h3 class="text-2xl font-bold mb-3">When we’re open</h3>
+                  <p class="text-teal-100 text-sm leading-relaxed">
+                    Monday to Saturday: 7:00am – 8:00pm<br/>
+                    Sunday: Closed
+                  </p>
+                </div>
+                <div class="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center">
+                  <i data-lucide="clock" class="h-6 w-6 text-teal-200"></i>
+                </div>
+              </div>
+              <div class="mt-6 text-sm text-teal-100">
+                If you leave a message outside opening hours, we will respond on the next business day.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right: Map + Message Form -->
+        <section class="lg:col-span-7 space-y-6">
+          <div class="bg-gray-50 rounded-3xl border border-gray-100 overflow-hidden">
+            <div class="p-7 md:p-8 flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Find us</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-2">South Kensington Studio</h2>
+                <p class="text-sm text-gray-600 mt-3">
+                  Embedded map for convenience. You can also open directions in Google Maps.
+                </p>
+              </div>
+              <div class="hidden sm:flex h-12 w-12 rounded-full bg-teal-100 items-center justify-center">
+                <i data-lucide="map" class="h-6 w-6 text-teal-700"></i>
+              </div>
+            </div>
+            <div class="aspect-[16/10] bg-white">
+              <iframe
+                title="Pilates Vita map"
+                class="w-full h-full"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=51.4938196,-0.1818683&z=17&output=embed"
+              ></iframe>
+            </div>
+          </div>
+
+          <div id="message" class="bg-gray-50 rounded-3xl border border-gray-100 p-8 md:p-10">
+            <div class="flex items-start justify-between gap-4 mb-8">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Got questions?</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-2">Send us an email</h2>
+                <p class="text-sm text-gray-600 mt-3">
+                  This is a static-friendly form: when you submit, your email client opens with a pre-filled message to our studio inbox.
+                </p>
+              </div>
+              <div class="hidden sm:flex h-12 w-12 rounded-full bg-teal-100 items-center justify-center">
+                <i data-lucide="mail" class="h-6 w-6 text-teal-700"></i>
+              </div>
+            </div>
+
+            <form id="contactForm" class="space-y-6" novalidate>
+              <div class="grid md:grid-cols-2 gap-5">
+                <div>
+                  <label for="name" class="block text-sm font-semibold text-gray-800">Name <span class="text-teal-700">*</span></label>
+                  <input id="name" name="name" type="text" required
+                         class="mt-2 w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-teal-400 focus:ring-2 focus:ring-teal-100"
+                         placeholder="First and last name" />
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-semibold text-gray-800">Email <span class="text-teal-700">*</span></label>
+                  <input id="email" name="email" type="email" required
+                         class="mt-2 w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-teal-400 focus:ring-2 focus:ring-teal-100"
+                         placeholder="you@example.com" />
+                </div>
+              </div>
+
+              <div>
+                <label for="messageText" class="block text-sm font-semibold text-gray-800">Message <span class="text-teal-700">*</span></label>
+                <textarea id="messageText" name="message" rows="6" required
+                          class="mt-2 w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-teal-400 focus:ring-2 focus:ring-teal-100"
+                          placeholder="How can we help?"></textarea>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <button type="submit"
+                        class="inline-flex items-center justify-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors w-full sm:w-auto">
+                  Send Message
+                  <i data-lucide="send" class="h-4 w-4"></i>
+                </button>
+                <a href="mailto:patricia.patricia@mac.com?subject=Pilates%20Vita%20%E2%80%94%20Website%20Enquiry"
+                   class="inline-flex items-center justify-center gap-2 bg-white text-teal-800 px-6 py-3 rounded-full font-semibold border border-teal-200 hover:bg-teal-50 transition-colors w-full sm:w-auto">
+                  Email Directly
+                  <i data-lucide="mail" class="h-4 w-4"></i>
+                </a>
+              </div>
+
+              <p id="formError" class="hidden text-sm text-red-600 mt-2"></p>
+              <p class="text-xs text-gray-500">
+                By submitting, you consent to being contacted by Pilates Vita regarding your enquiry.
+              </p>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div>
+          <span class="serif font-bold text-2xl text-white">Pilates<span class="text-teal-600">Vita</span></span>
+          <p class="text-sm mt-2">109 Gloucester Rd., South Kensington, SW7 4SS, London, United Kingdom</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 text-sm">
+          <a href="tel:+447833123833" class="hover:text-white transition-colors inline-flex items-center gap-2">
+            <i data-lucide="phone" class="h-4 w-4"></i> 07833 123833
+          </a>
+          <a href="https://wa.me/447833123833" target="_blank" rel="noopener" class="hover:text-white transition-colors inline-flex items-center gap-2">
+            <i data-lucide="message-circle" class="h-4 w-4"></i> WhatsApp
+          </a>
+          <a href="mailto:patricia.patricia@mac.com" class="hover:text-white transition-colors inline-flex items-center gap-2 break-all">
+            <i data-lucide="mail" class="h-4 w-4"></i> patricia.patricia@mac.com
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-xs text-gray-500">
+        <p>&copy; <span id="year"></span> Pilates Vita. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Navbar shadow on scroll
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-md');
+        navbar.classList.add('bg-white/95');
+      } else {
+        navbar.classList.remove('shadow-md');
+        navbar.classList.remove('bg-white/95');
+        navbar.classList.add('bg-white/90');
+      }
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form handling: open mail client with prefilled message
+    const form = document.getElementById('contactForm');
+    const err = document.getElementById('formError');
+
+    function encode(s) { return encodeURIComponent((s || '').trim()); }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      err.classList.add('hidden');
+      err.textContent = '';
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('messageText').value.trim();
+
+      if (!name || !email || !message) {
+        err.textContent = 'Please complete Name, Email, and Message.';
+        err.classList.remove('hidden');
+        return;
+      }
+
+      const subject = `Pilates Vita — Website Enquiry (${name})`;
+      const bodyLines = [
+        'Contact Page Enquiry',
+        '',
+        `Name: ${name}`,
+        `Email: ${email}`,
+        '',
+        'Message:',
+        message,
+        '',
+        '— Sent from Pilates Vita website'
+      ];
+
+      const mailto = `mailto:patricia.patricia@mac.com?subject=${encode(subject)}&body=${encode(bodyLines.join('\n'))}`;
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
