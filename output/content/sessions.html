@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,7 +25,14 @@
   </script>
 
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Fix dropdown gap issue */
+    .dropdown-menu {
+      padding-top: 0.5rem;
+      margin-top: -0.5rem;
+    }
   </style>
 </head>
 
@@ -34,54 +42,64 @@
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex items-center justify-between py-3">
         <button id="menuBtn"
-                class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
-                aria-label="Open menu">
+          class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
+          aria-label="Open menu">
           <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
         </button>
 
-        <a href="https://www.pilatesvita.com/" class="flex items-center gap-3">
+        <a href="./index.html" class="flex items-center gap-3">
           <img src="./Pilates Vita -1_files/pilates-vita-logo.png" alt="Pilates Vita" class="h-10 w-auto" />
         </a>
 
         <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-          <a class="hover:text-ink" href="https://www.pilatesvita.com/">Home</a>
-          <a class="hover:text-ink" href="https://www.pilatesvita.com/booking">Booking</a>
-          <a class="text-ink font-semibold" href="https://www.pilatesvita.com/sessions" aria-current="page">Session Types</a>
-          <a class="hover:text-ink" href="https://www.pilatesvita.com/reviews">Testimonials</a>
+          <a class="hover:text-ink" href="./index.html">Home</a>
+          <a class="hover:text-ink" href="./booking.html">Booking</a>
+          <a class="text-ink font-semibold" href="./sessions.html" aria-current="page">Session Types</a>
+          <a class="hover:text-ink" href="./reviews.html">Testimonials</a>
 
           <div class="relative group">
-            <a class="hover:text-ink inline-flex items-center gap-1" href="https://www.pilatesvita.com/about-1">
+            <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="./about.html">
               About
               <svg class="h-4 w-4 opacity-60" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                  clip-rule="evenodd" />
               </svg>
             </a>
-            <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition
-                        absolute left-0 mt-2 w-48 rounded-2xl bg-white shadow-soft ring-1 ring-slate-200 overflow-hidden">
-              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="https://www.pilatesvita.com/our-instructors-1">Our Instructors</a>
-              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="https://www.pilatesvita.com/studios">The Studio</a>
-              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="https://www.pilatesvita.com/about">Our Story</a>
+            <div
+              class="dropdown-menu invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200
+                        absolute left-0 top-full w-48 rounded-2xl bg-white shadow-soft ring-1 ring-slate-200 overflow-hidden">
+              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./our-instructors-1.html">Our Instructors</a>
+              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./studios.html">The
+                Studio</a>
+              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./about.html">Our
+                Story</a>
             </div>
           </div>
 
           <div class="relative group">
-            <a class="hover:text-ink inline-flex items-center gap-1" href="https://www.pilatesvita.com/what-is-pilates">
+            <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="https://www.pilatesvita.com/what-is-pilates">
               What Is Pilates?
               <svg class="h-4 w-4 opacity-60" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                  clip-rule="evenodd" />
               </svg>
             </a>
-            <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition
-                        absolute left-0 mt-2 w-56 rounded-2xl bg-white shadow-soft ring-1 ring-slate-200 overflow-hidden">
-              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="https://www.pilatesvita.com/introduction-to-pilates">Introduction to Pilates</a>
-              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="https://www.pilatesvita.com/seven-principles-of-pilates">Seven Principles of Pilates</a>
+            <div
+              class="dropdown-menu invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200
+                        absolute left-0 top-full w-56 rounded-2xl bg-white shadow-soft ring-1 ring-slate-200 overflow-hidden">
+              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./introduction-to-pilates.html">Introduction to
+                Pilates</a>
+              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./seven-principles-of-pilates.html">Seven
+                Principles of Pilates</a>
             </div>
           </div>
 
-          <a class="hover:text-ink" href="https://www.pilatesvita.com/certification">Certification</a>
-          <a class="hover:text-ink" href="https://www.pilatesvita.com/contact">Contact</a>
+          <a class="hover:text-ink" href="./certification.html">Certification</a>
+          <a class="hover:text-ink" href="./contact.html">Contact</a>
         </nav>
 
         <div class="hidden md:block w-10" aria-hidden="true"></div>
@@ -89,27 +107,36 @@
 
       <div id="mobileMenu" class="md:hidden hidden pb-4">
         <div class="rounded-2xl border border-slate-200 bg-white shadow-soft overflow-hidden">
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/">Home</a>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/booking">Booking</a>
-          <a class="block px-4 py-3 text-sm font-semibold text-ink bg-slate-50" href="https://www.pilatesvita.com/sessions" aria-current="page">Session Types</a>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/reviews">Testimonials</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./index.html">Home</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./booking.html">Booking</a>
+          <a class="block px-4 py-3 text-sm font-semibold text-ink bg-slate-50" href="./sessions.html"
+            aria-current="page">Session Types</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
+            href="./reviews.html">Testimonials</a>
 
           <div class="border-t border-slate-200"></div>
           <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">About</div>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/about-1">About</a>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/our-instructors-1">Our Instructors</a>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/studios">The Studio</a>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/about">Our Story</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
+            href="./about.html">About</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./our-instructors-1.html">Our
+            Instructors</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
+            href="./studios.html">The Studio</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./about.html">Our
+            Story</a>
 
           <div class="border-t border-slate-200"></div>
           <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">What Is Pilates?</div>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/what-is-pilates">What Is Pilates?</a>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/introduction-to-pilates">Introduction to Pilates</a>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/seven-principles-of-pilates">Seven Principles of Pilates</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
+            href="https://www.pilatesvita.com/what-is-pilates">What Is Pilates?</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
+            href="./introduction-to-pilates.html">Introduction to Pilates</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
+            href="./seven-principles-of-pilates.html">Seven Principles of Pilates</a>
 
           <div class="border-t border-slate-200"></div>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/certification">Certification</a>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="https://www.pilatesvita.com/contact">Contact</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./certification.html">Certification</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./contact.html">Contact</a>
         </div>
       </div>
     </div>
@@ -119,7 +146,8 @@
     <!-- Hero -->
     <section class="relative">
       <div class="absolute inset-0">
-        <img src="https://www.pilatesvita.com/s/unnamed-1.jpg" alt="Pilates Vita sessions" class="h-full w-full object-cover" />
+        <img src="./Pilates Vita -1_files/one-on-one.webp" alt="Pilates Vita sessions"
+          class="h-full w-full object-cover" />
         <div class="absolute inset-0 bg-black/40"></div>
       </div>
       <div class="relative mx-auto max-w-6xl px-4 py-20">
@@ -129,12 +157,12 @@
             Offering diverse approaches to cater to clients' varied needs, skills, comfort levels, and personal goals.
           </p>
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="https://www.pilatesvita.com/booking"
-               class="inline-flex items-center justify-center rounded-full bg-white text-slate-900 px-6 py-3 text-sm font-semibold shadow-soft hover:bg-slate-100">
+            <a href="./booking.html"
+              class="inline-flex items-center justify-center rounded-full bg-white text-slate-900 px-6 py-3 text-sm font-semibold shadow-soft hover:bg-slate-100">
               Book a session
             </a>
-            <a href="https://www.pilatesvita.com/intro-session"
-               class="inline-flex items-center justify-center rounded-full border border-white/80 text-white px-6 py-3 text-sm font-semibold hover:bg-white/10">
+            <a href="./intro-session.html"
+              class="inline-flex items-center justify-center rounded-full border border-white/80 text-white px-6 py-3 text-sm font-semibold hover:bg-white/10">
               10% off your first session
             </a>
           </div>
@@ -147,47 +175,64 @@
       <div class="mx-auto max-w-6xl px-4 py-16 space-y-10">
 
         <!-- Helper: section card -->
-        <div class="grid gap-8 lg:grid-cols-2 items-stretch rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
+        <div
+          class="grid gap-8 lg:grid-cols-2 items-stretch rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
           <div class="h-64 lg:h-auto">
-            <img src="https://www.pilatesvita.com/s/unnamed-1.jpg" alt="Private 1-1" class="h-full w-full object-cover" />
+            <img src="./Pilates Vita -1_files/one-on-one.webp" alt="Private 1-1" class="h-full w-full object-cover" />
           </div>
           <div class="p-8">
-            <h2 class="text-2xl font-semibold tracking-tight">Private 1-1 Session <span class="text-slate-500 font-normal">(55 mins)</span></h2>
+            <h2 class="text-2xl font-semibold tracking-tight">Private 1-1 Session <span
+                class="text-slate-500 font-normal">(55 mins)</span></h2>
             <p class="mt-4 text-slate-700 leading-relaxed">
-              Experience a private session tailored to your individual goals and preferences with expert instruction and precise guidance.
-              If you're new to Pilates, recovering from an injury, or haven't exercised in a while, this private session is mandatory before joining any group classes.
+              Experience a private session tailored to your individual goals and preferences with expert instruction and
+              precise guidance.
+              If you're new to Pilates, recovering from an injury, or haven't exercised in a while, this private session
+              is mandatory before joining any group classes.
             </p>
 
             <div class="mt-6 rounded-2xl border border-slate-200 p-5">
               <div class="text-sm font-semibold text-slate-900">Private Sessions With Any Teacher</div>
               <ul class="mt-3 space-y-2 text-sm text-slate-700">
-                <li class="flex items-baseline justify-between gap-4"><span>1 Private Session</span><span class="font-semibold text-slate-900">£176</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>5 Private Sessions <span class="text-slate-500">(save £65)</span></span><span class="font-semibold text-slate-900">£815</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>10 Private Sessions <span class="text-slate-500">(save £170)</span></span><span class="font-semibold text-slate-900">£1588</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>20 Private Sessions <span class="text-slate-500">(save £752)</span></span><span class="font-semibold text-slate-900">£2769</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>1 Private Session</span><span
+                    class="font-semibold text-slate-900">£176</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>5 Private Sessions <span
+                      class="text-slate-500">(save £65)</span></span><span
+                    class="font-semibold text-slate-900">£815</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>10 Private Sessions <span
+                      class="text-slate-500">(save £170)</span></span><span
+                    class="font-semibold text-slate-900">£1588</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>20 Private Sessions <span
+                      class="text-slate-500">(save £752)</span></span><span
+                    class="font-semibold text-slate-900">£2769</span></li>
               </ul>
 
               <div class="mt-6 text-sm font-semibold text-slate-900">New Student Sessions</div>
-              <div class="mt-2 text-sm text-slate-600">(Required for clients new to Pilates before joining any group sessions)</div>
+              <div class="mt-2 text-sm text-slate-600">(Required for clients new to Pilates before joining any group
+                sessions)</div>
               <ul class="mt-3 space-y-2 text-sm text-slate-700">
-                <li class="flex items-baseline justify-between gap-4"><span>3 Sessions <span class="text-slate-500">(save £39)</span></span><span class="font-semibold text-slate-900">£489</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>3 Sessions <span
+                      class="text-slate-500">(save £39)</span></span><span
+                    class="font-semibold text-slate-900">£489</span></li>
               </ul>
             </div>
 
             <div class="mt-6">
-              <a href="https://www.pilatesvita.com/booking"
-                 class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
+              <a href="./booking.html"
+                class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
                 Book Private 1-1 Sessions
               </a>
             </div>
           </div>
         </div>
 
-        <div class="grid gap-8 lg:grid-cols-2 items-stretch rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
+        <div
+          class="grid gap-8 lg:grid-cols-2 items-stretch rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
           <div class="order-2 lg:order-1 p-8">
-            <h2 class="text-2xl font-semibold tracking-tight">Duet / Trio Session <span class="text-slate-500 font-normal">(55 mins)</span></h2>
+            <h2 class="text-2xl font-semibold tracking-tight">Duet / Trio Session <span
+                class="text-slate-500 font-normal">(55 mins)</span></h2>
             <p class="mt-4 text-slate-700 leading-relaxed">
-              Work together on Pilates equipment under expert guidance. You can bring your own partner, or be matched with like-minded clients at your level and availability.
+              Work together on Pilates equipment under expert guidance. You can bring your own partner, or be matched
+              with like-minded clients at your level and availability.
               <span class="font-semibold text-slate-900">Prices are per person.</span>
             </p>
 
@@ -195,116 +240,164 @@
               <div class="rounded-2xl border border-slate-200 p-5">
                 <div class="text-sm font-semibold text-slate-900">Duet (per person)</div>
                 <ul class="mt-3 space-y-2 text-sm text-slate-700">
-                  <li class="flex items-baseline justify-between gap-4"><span>1 Duet Session</span><span class="font-semibold text-slate-900">£112</span></li>
-                  <li class="flex items-baseline justify-between gap-4"><span>5 Duet Sessions <span class="text-slate-500">(save £27)</span></span><span class="font-semibold text-slate-900">£533</span></li>
-                  <li class="flex items-baseline justify-between gap-4"><span>10 Duet Sessions <span class="text-slate-500">(save £152)</span></span><span class="font-semibold text-slate-900">£968</span></li>
-                  <li class="flex items-baseline justify-between gap-4"><span>20 Duet Sessions <span class="text-slate-500">(save £342)</span></span><span class="font-semibold text-slate-900">£1898</span></li>
+                  <li class="flex items-baseline justify-between gap-4"><span>1 Duet Session</span><span
+                      class="font-semibold text-slate-900">£112</span></li>
+                  <li class="flex items-baseline justify-between gap-4"><span>5 Duet Sessions <span
+                        class="text-slate-500">(save £27)</span></span><span
+                      class="font-semibold text-slate-900">£533</span></li>
+                  <li class="flex items-baseline justify-between gap-4"><span>10 Duet Sessions <span
+                        class="text-slate-500">(save £152)</span></span><span
+                      class="font-semibold text-slate-900">£968</span></li>
+                  <li class="flex items-baseline justify-between gap-4"><span>20 Duet Sessions <span
+                        class="text-slate-500">(save £342)</span></span><span
+                      class="font-semibold text-slate-900">£1898</span></li>
                 </ul>
               </div>
 
               <div class="rounded-2xl border border-slate-200 p-5">
                 <div class="text-sm font-semibold text-slate-900">Trio (per person)</div>
                 <ul class="mt-3 space-y-2 text-sm text-slate-700">
-                  <li class="flex items-baseline justify-between gap-4"><span>1 Trio Session</span><span class="font-semibold text-slate-900">£98</span></li>
-                  <li class="flex items-baseline justify-between gap-4"><span>5 Trio Sessions <span class="text-slate-500">(save £21)</span></span><span class="font-semibold text-slate-900">£469</span></li>
-                  <li class="flex items-baseline justify-between gap-4"><span>10 Trio Sessions <span class="text-slate-500">(save £120)</span></span><span class="font-semibold text-slate-900">£860</span></li>
-                  <li class="flex items-baseline justify-between gap-4"><span>20 Trio Sessions <span class="text-slate-500">(save £320)</span></span><span class="font-semibold text-slate-900">£1690</span></li>
+                  <li class="flex items-baseline justify-between gap-4"><span>1 Trio Session</span><span
+                      class="font-semibold text-slate-900">£98</span></li>
+                  <li class="flex items-baseline justify-between gap-4"><span>5 Trio Sessions <span
+                        class="text-slate-500">(save £21)</span></span><span
+                      class="font-semibold text-slate-900">£469</span></li>
+                  <li class="flex items-baseline justify-between gap-4"><span>10 Trio Sessions <span
+                        class="text-slate-500">(save £120)</span></span><span
+                      class="font-semibold text-slate-900">£860</span></li>
+                  <li class="flex items-baseline justify-between gap-4"><span>20 Trio Sessions <span
+                        class="text-slate-500">(save £320)</span></span><span
+                      class="font-semibold text-slate-900">£1690</span></li>
                 </ul>
               </div>
             </div>
 
             <div class="mt-6">
-              <a href="https://www.pilatesvita.com/booking"
-                 class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
+              <a href="./booking.html"
+                class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
                 Book Duet / Trio Sessions
               </a>
             </div>
           </div>
 
           <div class="order-1 lg:order-2 h-64 lg:h-auto">
-            <img src="https://www.pilatesvita.com/s/WhatsApp+Image+2019-10-02+at+124914+PM.jpeg" alt="Duet / Trio" class="h-full w-full object-cover" />
+            <img src="./Pilates Vita -1_files/duet-triot-session.webp" alt="Duet / Trio"
+              class="h-full w-full object-cover" />
           </div>
         </div>
 
-        <div class="grid gap-8 lg:grid-cols-2 items-stretch rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
+        <div
+          class="grid gap-8 lg:grid-cols-2 items-stretch rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
           <div class="h-64 lg:h-auto">
-            <img src="https://www.pilatesvita.com/s/WhatsApp+Image+2019-10-02+at+125524+PM.jpg" alt="Reformer & Cardio" class="h-full w-full object-cover" />
+            <img src="./Pilates Vita -1_files/reformer-cardio-session.webp" alt="Reformer & Cardio"
+              class="h-full w-full object-cover" />
           </div>
           <div class="p-8">
-            <h2 class="text-2xl font-semibold tracking-tight">Reformer &amp; Cardio Session <span class="text-slate-500 font-normal">(35 min)</span></h2>
+            <h2 class="text-2xl font-semibold tracking-tight">Reformer &amp; Cardio Session <span
+                class="text-slate-500 font-normal">(35 min)</span></h2>
             <p class="mt-4 text-slate-700 leading-relaxed">
-              A full-body workout merging the muscle-toning benefits of the reformer with cardio intensity to enhance strength, flexibility, and cardiovascular health.
+              A full-body workout merging the muscle-toning benefits of the reformer with cardio intensity to enhance
+              strength, flexibility, and cardiovascular health.
             </p>
 
             <div class="mt-6 rounded-2xl border border-slate-200 p-5">
               <ul class="space-y-2 text-sm text-slate-700">
-                <li class="flex items-baseline justify-between gap-4"><span>1 Reformer &amp; Cardio Session</span><span class="font-semibold text-slate-900">£85</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>5 Sessions <span class="text-slate-500">(save £27)</span></span><span class="font-semibold text-slate-900">£398</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>10 Sessions <span class="text-slate-500">(save £120)</span></span><span class="font-semibold text-slate-900">£730</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>20 Sessions <span class="text-slate-500">(save £170)</span></span><span class="font-semibold text-slate-900">£1530</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>1 Reformer &amp; Cardio Session</span><span
+                    class="font-semibold text-slate-900">£85</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>5 Sessions <span
+                      class="text-slate-500">(save £27)</span></span><span
+                    class="font-semibold text-slate-900">£398</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>10 Sessions <span
+                      class="text-slate-500">(save £120)</span></span><span
+                    class="font-semibold text-slate-900">£730</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>20 Sessions <span
+                      class="text-slate-500">(save £170)</span></span><span
+                    class="font-semibold text-slate-900">£1530</span></li>
               </ul>
             </div>
 
             <div class="mt-6">
-              <a href="https://www.pilatesvita.com/booking"
-                 class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
+              <a href="./booking.html"
+                class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
                 Book Reformer &amp; Cardio Sessions
               </a>
             </div>
           </div>
         </div>
 
-        <div class="grid gap-8 lg:grid-cols-2 items-stretch rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
+        <div
+          class="grid gap-8 lg:grid-cols-2 items-stretch rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
           <div class="order-2 lg:order-1 p-8">
-            <h2 class="text-2xl font-semibold tracking-tight">Pre- &amp; Post-Natal Session <span class="text-slate-500 font-normal">(55 mins)</span></h2>
+            <h2 class="text-2xl font-semibold tracking-tight">Pre- &amp; Post-Natal Session <span
+                class="text-slate-500 font-normal">(55 mins)</span></h2>
             <p class="mt-4 text-slate-700 leading-relaxed">
-              Specialised sessions supporting pregnancy and postpartum recovery with safe, effective exercises for strength, flexibility, and overall well-being.
+              Specialised sessions supporting pregnancy and postpartum recovery with safe, effective exercises for
+              strength, flexibility, and overall well-being.
             </p>
 
             <div class="mt-6 rounded-2xl border border-slate-200 p-5">
               <ul class="space-y-2 text-sm text-slate-700">
-                <li class="flex items-baseline justify-between gap-4"><span>1 Session</span><span class="font-semibold text-slate-900">£176</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>5 Sessions <span class="text-slate-500">(save £65)</span></span><span class="font-semibold text-slate-900">£815</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>10 Sessions <span class="text-slate-500">(save £170)</span></span><span class="font-semibold text-slate-900">£1588</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>20 Sessions <span class="text-slate-500">(save £752)</span></span><span class="font-semibold text-slate-900">£2769</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>1 Session</span><span
+                    class="font-semibold text-slate-900">£176</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>5 Sessions <span
+                      class="text-slate-500">(save £65)</span></span><span
+                    class="font-semibold text-slate-900">£815</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>10 Sessions <span
+                      class="text-slate-500">(save £170)</span></span><span
+                    class="font-semibold text-slate-900">£1588</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>20 Sessions <span
+                      class="text-slate-500">(save £752)</span></span><span
+                    class="font-semibold text-slate-900">£2769</span></li>
               </ul>
             </div>
 
             <div class="mt-6">
-              <a href="https://www.pilatesvita.com/booking"
-                 class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
+              <a href="./booking.html"
+                class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
                 Book Pre/Post-Natal Sessions
               </a>
             </div>
           </div>
 
           <div class="order-1 lg:order-2 h-64 lg:h-auto">
-            <img src="https://www.pilatesvita.com/s/DSC_3127.jpg" alt="Pre/Post-Natal" class="h-full w-full object-cover" />
+            <img src="./Pilates Vita -1_files/pre-and-post-natal-session.webp" alt="Pre/Post-Natal"
+              class="h-full w-full object-cover" />
           </div>
         </div>
 
-        <div class="grid gap-8 lg:grid-cols-2 items-stretch rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
+        <div
+          class="grid gap-8 lg:grid-cols-2 items-stretch rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
           <div class="h-64 lg:h-auto">
-            <img src="https://www.pilatesvita.com/s/feautre-image-1.jpg" alt="Men’s Pilates" class="h-full w-full object-cover" />
+            <img src="./Pilates Vita -1_files/men's-pilates-sessions.webp" alt="Men’s Pilates"
+              class="h-full w-full object-cover" />
           </div>
           <div class="p-8">
-            <h2 class="text-2xl font-semibold tracking-tight">Men’s Pilates Session <span class="text-slate-500 font-normal">(55 mins)</span></h2>
+            <h2 class="text-2xl font-semibold tracking-tight">Men’s Pilates Session <span
+                class="text-slate-500 font-normal">(55 mins)</span></h2>
             <p class="mt-4 text-slate-700 leading-relaxed">
-              Targeted training built around male physiology to build core strength, enhance flexibility, support injury recovery, and boost athletic performance.
+              Targeted training built around male physiology to build core strength, enhance flexibility, support injury
+              recovery, and boost athletic performance.
             </p>
 
             <div class="mt-6 rounded-2xl border border-slate-200 p-5">
               <ul class="space-y-2 text-sm text-slate-700">
-                <li class="flex items-baseline justify-between gap-4"><span>1 Session</span><span class="font-semibold text-slate-900">£176</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>5 Sessions <span class="text-slate-500">(save £65)</span></span><span class="font-semibold text-slate-900">£815</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>10 Sessions <span class="text-slate-500">(save £170)</span></span><span class="font-semibold text-slate-900">£1588</span></li>
-                <li class="flex items-baseline justify-between gap-4"><span>20 Sessions <span class="text-slate-500">(save £752)</span></span><span class="font-semibold text-slate-900">£2769</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>1 Session</span><span
+                    class="font-semibold text-slate-900">£176</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>5 Sessions <span
+                      class="text-slate-500">(save £65)</span></span><span
+                    class="font-semibold text-slate-900">£815</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>10 Sessions <span
+                      class="text-slate-500">(save £170)</span></span><span
+                    class="font-semibold text-slate-900">£1588</span></li>
+                <li class="flex items-baseline justify-between gap-4"><span>20 Sessions <span
+                      class="text-slate-500">(save £752)</span></span><span
+                    class="font-semibold text-slate-900">£2769</span></li>
               </ul>
             </div>
 
             <div class="mt-6">
-              <a href="https://www.pilatesvita.com/booking"
-                 class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
+              <a href="./booking.html"
+                class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
                 Book Men’s Pilates Sessions
               </a>
             </div>
@@ -316,8 +409,8 @@
           <h3 class="text-xl font-semibold tracking-tight">Still not sure?</h3>
           <p class="mt-2 text-slate-700">Start with an intro session and get 10% off your first session.</p>
           <div class="mt-6 flex justify-center">
-            <a href="https://www.pilatesvita.com/intro-session"
-               class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800">
+            <a href="./intro-session.html"
+              class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800">
               try your first session and get 10% OFF
             </a>
           </div>
@@ -334,7 +427,8 @@
         <div class="md:col-span-1"></div>
 
         <div class="md:col-span-1 text-center">
-          <img src="./Pilates Vita -1_files/pilates-vita-logo-200-white.png" alt="Pilates Vita" class="mx-auto h-10 w-auto" />
+          <img src="./Pilates Vita -1_files/pilates-vita-logo-200-white.png" alt="Pilates Vita"
+            class="mx-auto h-10 w-auto" />
           <p class="mt-6 text-sm leading-relaxed text-white/90">
             109 Gloucester Rd.<br />
             South Kensington, SW7 4SS<br />
@@ -342,34 +436,46 @@
           </p>
           <p class="mt-4 text-sm leading-relaxed text-white/90">
             Phone: <a class="underline hover:no-underline" href="tel:07833123833">07833 123833</a><br />
-            WhatsApp: <a class="underline hover:no-underline" href="https://wa.me/447833123833" target="_blank" rel="noreferrer">07833 123833</a><br />
-            Email: <a class="underline hover:no-underline" href="mailto:patricia.patricia@mac.com" target="_blank" rel="noreferrer">patricia.patricia@mac.com</a><br /><br />
-            <a class="underline hover:no-underline" href="https://www.pilatesvita.com/policies">Booking &amp; Cancellation Policy</a>
+            WhatsApp: <a class="underline hover:no-underline" href="https://wa.me/447833123833" target="_blank"
+              rel="noreferrer">07833 123833</a><br />
+            Email: <a class="underline hover:no-underline" href="mailto:patricia.patricia@mac.com" target="_blank"
+              rel="noreferrer">patricia.patricia@mac.com</a><br /><br />
+            <a class="underline hover:no-underline" href="./policies.html">Booking &amp; Cancellation Policy</a>
           </p>
 
           <div class="mt-8 flex items-center justify-center gap-4">
             <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
-               href="https://www.facebook.com/Pilates-Vita-London-UK-2692498114156033/" target="_blank" rel="noreferrer" aria-label="Facebook">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3H13.5V9.1c0-.9.2-1.5 1.5-1.5h1.6V5c-.3 0-1.4-.1-2.7-.1-2.6 0-4.4 1.6-4.4 4.6V11H7v3h2.5v8h4z"/></svg>
-            </a>
-            <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
-               href="https://www.instagram.com//pilatesvitakensington" target="_blank" rel="noreferrer" aria-label="Instagram">
+              href="https://www.facebook.com/Pilates-Vita-London-UK-2692498114156033/" target="_blank" rel="noreferrer"
+              aria-label="Facebook">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z"/>
-                <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
-                <path d="M17.5 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                <path
+                  d="M13.5 22v-8h2.7l.4-3H13.5V9.1c0-.9.2-1.5 1.5-1.5h1.6V5c-.3 0-1.4-.1-2.7-.1-2.6 0-4.4 1.6-4.4 4.6V11H7v3h2.5v8h4z" />
               </svg>
             </a>
             <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
-               href="mailto:patricia.patricia@mac.com" aria-label="Email">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm0 2-8 5L4 8h16z"/></svg>
+              href="https://www.instagram.com//pilatesvitakensington" target="_blank" rel="noreferrer"
+              aria-label="Instagram">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z" />
+                <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+                <path d="M17.5 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+              </svg>
+            </a>
+            <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
+              href="mailto:patricia.patricia@mac.com" aria-label="Email">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm0 2-8 5L4 8h16z" />
+              </svg>
             </a>
           </div>
 
           <div class="mt-10 flex items-center justify-center gap-6">
-            <img src="./Pilates Vita -1_files/pilates-method-alliance-certified.gif" alt="PMA certified" class="h-10 w-auto rounded bg-white/90 p-1" />
+            <img src="./Pilates Vita -1_files/pilates-method-alliance-certified.gif" alt="PMA certified"
+              class="h-10 w-auto rounded bg-white/90 p-1" />
             <img src="./Pilates Vita -1_files/selo.png" alt="Award badge" class="h-10 w-auto rounded bg-white/90 p-1" />
-            <img src="./Pilates Vita -1_files/review-us-google.jpg" alt="Review us on Google" class="h-10 w-auto rounded bg-white/90 p-1" />
+            <img src="./Pilates Vita -1_files/review-us-google.jpg" alt="Review us on Google"
+              class="h-10 w-auto rounded bg-white/90 p-1" />
           </div>
         </div>
 
@@ -389,4 +495,5 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>

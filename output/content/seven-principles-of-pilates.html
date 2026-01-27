@@ -1,312 +1,388 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seven Principles of Pilates &amp;mdash; Pilates Vita</title>
-  <link rel="canonical" href="https://www.pilatesvita.com/seven-principles-of-pilates" />
-  <meta name="description" content="Learn the seven principles of Pilates: Breath, Centering, Balance, Control, Coordination, Precision, and Flow." />
-  <meta property="og:site_name" content="Pilates Vita" />
-  <meta property="og:title" content="Seven Principles of Pilates &amp;mdash; Pilates Vita" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.pilatesvita.com/seven-principles-of-pilates" />
-  
 
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seven Principles of Pilates — Pilates Vita</title>
+  <meta name="description"
+    content="Learn the seven key principles of the Pilates Method: Breath, Centering, Balance, Control, Coordination, Precision, and Flow." />
+
+  <!-- Tailwind (CDN for quick static prototype) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0b1b3a",
+            ink2: "#0a1630",
+          },
+          boxShadow: {
+            soft: "0 12px 40px rgba(15, 23, 42, 0.10)",
+          }
+        }
+      }
+    }
+  </script>
 
   <style>
-    body { font-family: 'Lato', sans-serif; color:#111827; background:#fcfcfc; }
-    h1,h2,h3,h4,.serif { font-family: 'Playfair Display', serif; }
-    .hero-overlay { background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.88)); }
-    .smooth-scroll { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Fix dropdown gap issue */
+    .dropdown-menu {
+      padding-top: 0.5rem;
+      margin-top: -0.5rem;
+    }
   </style>
 </head>
 
-<body class="smooth-scroll antialiased selection:bg-teal-100 selection:text-teal-900">
+<body class="bg-white text-slate-900 font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex items-center justify-between py-3">
+        <!-- Mobile menu button -->
+        <button id="menuBtn"
+          class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
+          aria-label="Open menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
 
-  <!-- Navigation (matches rebuilt theme) -->
-  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
-        <a href="/" class="flex items-center gap-2">
-          <i data-lucide="activity" class="h-6 w-6 text-teal-600"></i>
-          <span class="serif font-bold text-xl tracking-wide text-gray-900">Pilates<span class="text-teal-600">Vita</span></span>
+        <!-- Logo -->
+        <a href="./index.html" class="flex items-center gap-3">
+          <img src="./Pilates Vita -1_files/pilates-vita-logo.png" alt="Pilates Vita" class="h-10 w-auto" />
         </a>
 
-        <div class="hidden md:flex items-center gap-8">
-          <a href="/booking" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Booking</a>
-          <a href="/sessions" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Session Types</a>
-          <a href="/reviews" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Testimonials</a>
-          <a href="/about" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Our Story</a>
-          <a href="/contact" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Contact</a>
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a class="hover:text-ink" href="./index.html">Home</a>
+          <a class="hover:text-ink" href="./booking.html">Booking</a>
+          <a class="hover:text-ink" href="./sessions.html">Session Types</a>
+          <a class="hover:text-ink" href="./reviews.html">Testimonials</a>
 
-          <a href="/intro-session"
-             class="inline-flex items-center gap-2 bg-teal-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-teal-700 transition-colors">
-            <i data-lucide="sparkles" class="h-4 w-4"></i>
-            10% Off Your First Private Session
-          </a>
-        </div>
+          <!-- About dropdown -->
+          <div class="relative group">
+            <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="./about.html">
+              About
+              <svg class="h-4 w-4 opacity-60" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+            <div
+              class="dropdown-menu invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200
+                        absolute left-0 top-full w-48 rounded-2xl bg-white shadow-soft ring-1 ring-slate-200 overflow-hidden">
+              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./our-instructors-1.html">Our Instructors</a>
+              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./studios.html">The Studio</a>
+              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./about.html">Our Story</a>
+            </div>
+          </div>
 
-        <div class="md:hidden">
-          <button id="mobileBtn" class="text-gray-700 hover:text-teal-600" aria-label="Open menu">
-            <i data-lucide="menu" class="h-6 w-6"></i>
-          </button>
-        </div>
+          <!-- What is Pilates dropdown -->
+          <div class="relative group">
+            <a class="text-ink font-semibold inline-flex items-center gap-1 pb-2" href="./introduction-to-pilates.html">
+              What Is Pilates?
+              <svg class="h-4 w-4 opacity-60" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+            <div
+              class="dropdown-menu invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200
+                        absolute left-0 top-full w-56 rounded-2xl bg-white shadow-soft ring-1 ring-slate-200 overflow-hidden">
+              <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./introduction-to-pilates.html">Introduction to
+                Pilates</a>
+              <a class="block px-4 py-3 text-sm font-semibold bg-slate-50"
+                href="./seven-principles-of-pilates.html">Seven Principles of Pilates</a>
+            </div>
+          </div>
+
+          <a class="hover:text-ink" href="./certification.html">Certification</a>
+          <a class="hover:text-ink" href="./contact.html">Contact</a>
+        </nav>
+
+        <div class="hidden md:block w-10" aria-hidden="true"></div>
       </div>
-    </div>
 
-    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-md">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3">
-        <a href="/" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Home</a>
-        <a href="/booking" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Booking</a>
-        <a href="/sessions" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Session Types</a>
-        <a href="/reviews" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Testimonials</a>
-        <a href="/about" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Our Story</a>
-        <a href="/introduction-to-pilates" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Introduction to Pilates</a>
-        <a href="/seven-principles-of-pilates" class="py-2 text-teal-700 font-semibold">Seven Principles</a>
-        <a href="/contact" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Contact</a>
-        <a href="/intro-session" class="mt-2 inline-flex justify-center items-center gap-2 bg-teal-600 text-white px-5 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors">
-          <i data-lucide="sparkles" class="h-4 w-4"></i>
-          10% Off Your First Private Session
-        </a>
-      </div>
-    </div>
-  </nav>
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <div class="rounded-2xl border border-slate-200 bg-white shadow-soft overflow-hidden">
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./index.html">Home</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./booking.html">Booking</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./sessions.html">Session Types</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./reviews.html">Testimonials</a>
 
-  <!-- Hero -->
-  <header class="relative pt-20 pb-16 md:pb-20 text-white overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/1557263957610-BMKIGN9HJFFWKE9Z0YSG/483.jpg" alt="Pilates principles" class="w-full h-full object-cover object-center" />
-      <div class="hero-overlay absolute inset-0"></div>
-    </div>
+          <div class="border-t border-slate-200"></div>
+          <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">About</div>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./about.html">About</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./our-instructors-1.html">Our
+            Instructors</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./studios.html">The Studio</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./about.html">Our Story</a>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6">
-      <div class="max-w-3xl">
-        <p class="text-teal-300 font-bold tracking-widest uppercase mb-4 text-sm">What is Pilates?</p>
-        <h1 class="text-4xl md:text-6xl font-bold leading-tight">The Seven Principles of Pilates</h1>
-        <p class="text-lg md:text-xl text-white/85 mt-6">A practical lens for how we teach: focus, alignment, and intentional movement—so every session is effective and sustainable.</p>
+          <div class="border-t border-slate-200"></div>
+          <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">What Is Pilates?</div>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
+            href="./introduction-to-pilates.html">Introduction to Pilates</a>
+          <a class="block px-4 py-3 text-sm font-semibold text-ink bg-slate-50"
+            href="./seven-principles-of-pilates.html" aria-current="page">Seven Principles of Pilates</a>
 
-        <div class="mt-10 flex flex-col sm:flex-row gap-3">
-          <a href="#principles" class="inline-flex items-center justify-center gap-2 bg-teal-600 text-white px-7 py-3.5 rounded-full font-semibold hover:bg-teal-700 transition-colors">
-            <i data-lucide="list-checks" class="h-4 w-4"></i>
-            Explore principles
-          </a>
-          <a href="/booking" class="inline-flex items-center justify-center gap-2 bg-white text-gray-900 px-7 py-3.5 rounded-full font-semibold hover:bg-teal-50 transition-colors">
-            <i data-lucide="calendar" class="h-4 w-4"></i>
-            Book a session
-          </a>
-          <a href="/introduction-to-pilates" class="inline-flex items-center justify-center gap-2 bg-white/10 text-white px-7 py-3.5 rounded-full font-semibold border border-white/25 hover:bg-white/15 transition-colors">
-            <i data-lucide="book-open" class="h-4 w-4"></i>
-            Intro to Pilates
-          </a>
+          <div class="border-t border-slate-200"></div>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./certification.html">Certification</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./contact.html">Contact</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Content -->
-  <main class="py-16 bg-white" id="principles">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-        <div>
-          <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Core concepts</p>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">The principles we coach</h2>
-          <p class="text-gray-600 mt-4 max-w-2xl">Use these as cues in your sessions: how you breathe, where you initiate movement, and how smoothly you transition—all matter.</p>
-        </div>
-        <div class="flex gap-3">
-          <a href="/sessions" class="inline-flex items-center justify-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            <i data-lucide="layout-grid" class="h-4 w-4"></i>
-            Session types
+  <main>
+    <!-- Hero -->
+    <section class="bg-slate-50">
+      <div class="mx-auto max-w-4xl px-4 py-16 text-center">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
+          The Seven Principles of Pilates
+        </h1>
+        <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
+          Master these fundamental principles to unlock the full power of your Pilates practice.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="./introduction-to-pilates.html"
+            class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800 transition">
+            ← Introduction to Pilates
           </a>
-          <a href="/booking" class="inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors">
-            <i data-lucide="calendar-check" class="h-4 w-4"></i>
-            Book now
+          <a href="./booking.html"
+            class="inline-flex items-center justify-center rounded-full border border-slate-900 text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white transition">
+            Book a Session
           </a>
         </div>
       </div>
+    </section>
 
-      <div class="mt-10 grid md:grid-cols-2 gap-6">
-        
-      <div class="rounded-3xl border border-gray-100 bg-white shadow-sm p-7 hover:shadow-md transition-shadow">
-        <div class="flex items-start gap-4">
-          <div class="h-12 w-12 rounded-2xl bg-teal-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="wind" class="h-6 w-6 text-teal-700"></i>
-          </div>
-          <div>
-            <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Principle 01</p>
-            <h3 class="serif text-2xl font-bold text-gray-900 mt-2">Breath</h3>
-            <p class="text-gray-600 mt-3 leading-relaxed">All exercises are performed with rhythm and dynamism, connecting heartbeat and respiration through perfectly timed breathing.</p>
-          </div>
-        </div>
-      </div>
-    
+    <!-- Principles -->
+    <section class="bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-16">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-      <div class="rounded-3xl border border-gray-100 bg-white shadow-sm p-7 hover:shadow-md transition-shadow">
-        <div class="flex items-start gap-4">
-          <div class="h-12 w-12 rounded-2xl bg-teal-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="target" class="h-6 w-6 text-teal-700"></i>
-          </div>
-          <div>
-            <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Principle 02</p>
-            <h3 class="serif text-2xl font-bold text-gray-900 mt-2">Centering</h3>
-            <p class="text-gray-600 mt-3 leading-relaxed">All movements are controlled through the centre, or &quot;powerhouse.&quot; Exercises are done with proper alignment to maintain balance in the body.</p>
-          </div>
-        </div>
-      </div>
-    
-
-      <div class="rounded-3xl border border-gray-100 bg-white shadow-sm p-7 hover:shadow-md transition-shadow">
-        <div class="flex items-start gap-4">
-          <div class="h-12 w-12 rounded-2xl bg-teal-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="scale" class="h-6 w-6 text-teal-700"></i>
-          </div>
-          <div>
-            <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Principle 03</p>
-            <h3 class="serif text-2xl font-bold text-gray-900 mt-2">Balance</h3>
-            <p class="text-gray-600 mt-3 leading-relaxed">Learn how to move your body with the precise balance required for the equipment you’re using to ensure a safe and effective workout.</p>
-          </div>
-        </div>
-      </div>
-    
-
-      <div class="rounded-3xl border border-gray-100 bg-white shadow-sm p-7 hover:shadow-md transition-shadow">
-        <div class="flex items-start gap-4">
-          <div class="h-12 w-12 rounded-2xl bg-teal-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="sliders-horizontal" class="h-6 w-6 text-teal-700"></i>
-          </div>
-          <div>
-            <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Principle 04</p>
-            <h3 class="serif text-2xl font-bold text-gray-900 mt-2">Control</h3>
-            <p class="text-gray-600 mt-3 leading-relaxed">When performing exercises properly, you control all your body movements. Habit does not guide the execution of the exercises.</p>
-          </div>
-        </div>
-      </div>
-    
-
-      <div class="rounded-3xl border border-gray-100 bg-white shadow-sm p-7 hover:shadow-md transition-shadow">
-        <div class="flex items-start gap-4">
-          <div class="h-12 w-12 rounded-2xl bg-teal-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="shuffle" class="h-6 w-6 text-teal-700"></i>
-          </div>
-          <div>
-            <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Principle 05</p>
-            <h3 class="serif text-2xl font-bold text-gray-900 mt-2">Coordination</h3>
-            <p class="text-gray-600 mt-3 leading-relaxed">Exercises on a Pilates apparatus require perfect coordination to be executed correctly.</p>
-          </div>
-        </div>
-      </div>
-    
-
-      <div class="rounded-3xl border border-gray-100 bg-white shadow-sm p-7 hover:shadow-md transition-shadow">
-        <div class="flex items-start gap-4">
-          <div class="h-12 w-12 rounded-2xl bg-teal-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="ruler" class="h-6 w-6 text-teal-700"></i>
-          </div>
-          <div>
-            <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Principle 06</p>
-            <h3 class="serif text-2xl font-bold text-gray-900 mt-2">Precision</h3>
-            <p class="text-gray-600 mt-3 leading-relaxed">Exercises are performed with clear structure and precise form. The work emphasises quality, not quantity, to achieve the full benefit of each exercise.</p>
-          </div>
-        </div>
-      </div>
-    
-
-      <div class="rounded-3xl border border-gray-100 bg-white shadow-sm p-7 hover:shadow-md transition-shadow">
-        <div class="flex items-start gap-4">
-          <div class="h-12 w-12 rounded-2xl bg-teal-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="waves" class="h-6 w-6 text-teal-700"></i>
-          </div>
-          <div>
-            <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Principle 07</p>
-            <h3 class="serif text-2xl font-bold text-gray-900 mt-2">Flow</h3>
-            <p class="text-gray-600 mt-3 leading-relaxed">The workout is designed for one exercise to flow naturally into the next, with minimal movement between exercises to create maximum flow.</p>
-          </div>
-        </div>
-      </div>
-    
-      </div>
-
-      <div class="mt-12 bg-gray-50 rounded-3xl border border-gray-100 p-8 md:p-10">
-        <div class="flex items-start gap-4">
-          <div class="h-12 w-12 rounded-2xl bg-teal-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="lightbulb" class="h-6 w-6 text-teal-700"></i>
-          </div>
-          <div class="max-w-3xl">
-            <h3 class="serif text-2xl font-bold text-gray-900">How to use these principles</h3>
-            <p class="text-gray-600 mt-3 leading-relaxed">In practice, you do not “do” one principle at a time—you integrate all seven. In your next session, pick one cue (for example: breath or centering) and maintain it throughout your programme.</p>
-            <div class="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="/intro-session" class="inline-flex items-center justify-center gap-2 bg-teal-600 text-white px-7 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors">
-                <i data-lucide="sparkles" class="h-4 w-4"></i>
-                Start with an intro session
-              </a>
-              <a href="/contact" class="inline-flex items-center justify-center gap-2 bg-white text-gray-900 px-7 py-3 rounded-full font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-                <i data-lucide="mail" class="h-4 w-4"></i>
-                Ask a question
-              </a>
+          <!-- Breath -->
+          <div class="rounded-3xl border border-slate-200 shadow-soft p-8 bg-gradient-to-br from-slate-50 to-white">
+            <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mb-6">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 2v4M16 2v4M21 13V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h8"></path>
+                <path d="M3 10h18M16 19s1.5-2 2.5-2 2.5 2 2.5 2M16 22s1.5-2 2.5-2 2.5 2 2.5 2"></path>
+              </svg>
             </div>
+            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Breath</h3>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              All exercises are performed with rhythm and dynamism, connecting heartbeat and respiration through
+              perfectly timed breathing.
+            </p>
+          </div>
+
+          <!-- Centering -->
+          <div class="rounded-3xl border border-slate-200 shadow-soft p-8 bg-gradient-to-br from-slate-50 to-white">
+            <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mb-6">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Centering</h3>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              All movements are controlled through the centre, or "powerhouse." Exercises are done with proper alignment
+              to maintain balance in the body.
+            </p>
+          </div>
+
+          <!-- Balance -->
+          <div class="rounded-3xl border border-slate-200 shadow-soft p-8 bg-gradient-to-br from-slate-50 to-white">
+            <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mb-6">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636L5.636 18.364"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Balance</h3>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              Learn how to move your body with the precise balance required for the equipment you're using to ensure a
+              safe and effective workout.
+            </p>
+          </div>
+
+          <!-- Control -->
+          <div class="rounded-3xl border border-slate-200 shadow-soft p-8 bg-gradient-to-br from-slate-50 to-white">
+            <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mb-6">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Control</h3>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              When performing exercises properly, you control all your body movements. Habit does not guide the
+              execution of the exercises.
+            </p>
+          </div>
+
+          <!-- Coordination -->
+          <div class="rounded-3xl border border-slate-200 shadow-soft p-8 bg-gradient-to-br from-slate-50 to-white">
+            <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mb-6">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Coordination</h3>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              Exercises on a Pilates apparatus require perfect coordination to be executed correctly.
+            </p>
+          </div>
+
+          <!-- Precision -->
+          <div class="rounded-3xl border border-slate-200 shadow-soft p-8 bg-gradient-to-br from-slate-50 to-white">
+            <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mb-6">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Precision</h3>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              Exercises are performed with clear structure and precise form. The work emphasises quality, not quantity,
+              to achieve the full benefit of each exercise.
+            </p>
+          </div>
+
+          <!-- Flow -->
+          <div
+            class="rounded-3xl border border-slate-200 shadow-soft p-8 bg-gradient-to-br from-slate-50 to-white md:col-span-2 lg:col-span-1">
+            <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mb-6">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Flow</h3>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              The workout is designed for one exercise to flow naturally into the next, with minimal movement between
+              exercises to create maximum flow.
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-16 rounded-3xl border border-slate-200 bg-slate-50 p-8 text-center">
+          <h2 class="text-xl font-semibold tracking-tight text-slate-900">
+            Ready to Experience These Principles?
+          </h2>
+          <p class="mt-4 text-slate-600">
+            Book a session and let our expert instructors guide you through these fundamental principles.
+          </p>
+          <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
+            <a href="./booking.html"
+              class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800 transition">
+              Book a Session
+            </a>
+            <a href="./intro-session.html"
+              class="inline-flex items-center justify-center rounded-full border border-slate-900 text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white transition">
+              10% Off First Session
+            </a>
           </div>
         </div>
       </div>
-
-    </div>
+    </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-950 text-gray-400 py-12">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-        <div class="flex items-center gap-3">
-          <i data-lucide="activity" class="h-6 w-6 text-teal-500"></i>
-          <div>
-            <span class="serif font-bold text-2xl text-white">Pilates<span class="text-teal-600">Vita</span></span>
-            <p class="text-sm mt-2">109 Gloucester Rd., South Kensington, SW7 4SS, London, United Kingdom</p>
+  <footer class="bg-ink2 text-white">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="grid gap-10 md:grid-cols-3 items-start">
+        <div class="md:col-span-1"></div>
+
+        <div class="md:col-span-1 text-center">
+          <img src="./Pilates Vita -1_files/pilates-vita-logo-200-white.png" alt="Pilates Vita"
+            class="mx-auto h-10 w-auto" />
+          <p class="mt-6 text-sm leading-relaxed text-white/90">
+            109 Gloucester Rd.<br />
+            South Kensington, SW7 4SS<br />
+            London, United Kingdom
+          </p>
+          <p class="mt-4 text-sm leading-relaxed text-white/90">
+            Phone: <a class="underline hover:no-underline" href="tel:07833123833">07833 123833</a><br />
+            WhatsApp: <a class="underline hover:no-underline" href="https://wa.me/447833123833" target="_blank"
+              rel="noreferrer">07833 123833</a><br />
+            Email: <a class="underline hover:no-underline" href="mailto:patricia.patricia@mac.com" target="_blank"
+              rel="noreferrer">patricia.patricia@mac.com</a><br /><br />
+            <a class="underline hover:no-underline" href="./policies.html">Booking &amp; Cancellation Policy</a>
+          </p>
+
+          <div class="mt-8 flex items-center justify-center gap-4">
+            <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
+              href="https://www.facebook.com/Pilates-Vita-London-UK-2692498114156033/" target="_blank" rel="noreferrer"
+              aria-label="Facebook">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.5 22v-8h2.7l.4-3H13.5V9.1c0-.9.2-1.5 1.5-1.5h1.6V5c-.3 0-1.4-.1-2.7-.1-2.6 0-4.4 1.6-4.4 4.6V11H7v3h2.5v8h4z" />
+              </svg>
+            </a>
+            <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
+              href="https://www.instagram.com//pilatesvitakensington" target="_blank" rel="noreferrer"
+              aria-label="Instagram">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z" />
+                <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+                <path d="M17.5 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+              </svg>
+            </a>
+            <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
+              href="mailto:patricia.patricia@mac.com" aria-label="Email">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm0 2-8 5L4 8h16z" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="mt-10 flex items-center justify-center gap-6">
+            <img src="./Pilates Vita -1_files/pilates-method-alliance-certified.gif" alt="PMA certified"
+              class="h-10 w-auto rounded bg-white/90 p-1" />
+            <img src="./Pilates Vita -1_files/selo.png" alt="Award badge" class="h-10 w-auto rounded bg-white/90 p-1" />
+            <img src="./Pilates Vita -1_files/review-us-google.jpg" alt="Review us on Google"
+              class="h-10 w-auto rounded bg-white/90 p-1" />
           </div>
         </div>
 
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="tel:+447833123833" class="hover:text-white transition-colors inline-flex items-center gap-2">
-            <i data-lucide="phone" class="h-4 w-4"></i> 07833 123833
-          </a>
-          <a href="https://wa.me/447833123833" target="_blank" rel="noopener" class="hover:text-white transition-colors inline-flex items-center gap-2">
-            <i data-lucide="message-circle" class="h-4 w-4"></i> WhatsApp
-          </a>
-          <a href="mailto:patricia.patricia@mac.com" class="hover:text-white transition-colors inline-flex items-center gap-2 break-all">
-            <i data-lucide="mail" class="h-4 w-4"></i> patricia.patricia@mac.com
-          </a>
-          <a href="/policies" class="hover:text-white transition-colors inline-flex items-center gap-2">
-            <i data-lucide="file-text" class="h-4 w-4"></i> Booking &amp; Cancellation Policy
-          </a>
-        </div>
+        <div class="md:col-span-1"></div>
       </div>
 
-      <div class="border-t border-gray-800 mt-10 pt-8 text-center text-xs text-gray-500">
-        <p>&copy; <span id="year"></span> Pilates Vita. All rights reserved.</p>
+      <div class="mt-14 border-t border-white/10 pt-6 text-center text-xs text-white/60">
+        © <span id="year"></span> Pilates Vita. All rights reserved.
       </div>
     </div>
   </footer>
 
+  <!-- JS: mobile menu + year -->
   <script>
-    lucide.createIcons();
-
-    window.addEventListener('scroll', function () {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('shadow-md');
-        navbar.classList.add('bg-white/95');
-      } else {
-        navbar.classList.remove('shadow-md');
-        navbar.classList.remove('bg-white/95');
-        navbar.classList.add('bg-white/90');
-      }
-    });
-
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    document.getElementById('mobileBtn')?.addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.toggle('hidden');
-    });
   </script>
 </body>
+
 </html>
