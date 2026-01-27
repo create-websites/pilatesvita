@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "kreate-pilatesvita",
+    "public": "output/content",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
