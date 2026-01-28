@@ -5,17 +5,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pilates Vita — Home (Tailwind rebuild)</title>
-<meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" /><link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico"/>
-<link rel="canonical" href="https://www.pilatesvita.com"/>
-<meta property="og:site_name" content="Pilates Vita"/>
-<meta property="og:title" content="Pilates Vita"/>
-<meta property="og:url" content="https://www.pilatesvita.com"/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="http://static1.squarespace.com/static/5cbf4c0f7d0c9122a51c8d0f/t/5ccf7e44eb3931597f98dca8/1557102149578/pilates-vita-logo.png?format=1500w"/>
-<meta property="og:image:width" content="600"/>
-<meta property="og:image:height" content="209"/>
-<meta itemprop="name" content="Pilates Vita"/>
-<meta itemprop="url" content="https://www.pilatesvita.com"/>
 
   <!-- Tailwind (CDN for quick static prototype) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -191,7 +180,6 @@
     </section>
 
     <!-- Index page 2 (image-only section in the original: new-page-1) -->
-    <!--
     <section id="new-page-1" class="bg-white">
       <div class="mx-auto max-w-6xl px-4 py-10">
         <div class="rounded-3xl overflow-hidden shadow-soft ring-1 ring-slate-200">
@@ -200,7 +188,6 @@
         </div>
       </div>
     </section>
-    -->
 
     <!-- Index page 3 (Tailored: new-page-2) -->
     <section id="new-page-2" class="bg-white">

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pilates Vita</title>
+  <meta name="description" content="Pilates Vita — private sessions with master instructors in a luxurious South Kensington studio. Book your first session and get 10% off." />
+  <link rel="canonical" href="https://www.pilatesvita.com/" />
+  <meta property="og:site_name" content="Pilates Vita" />
+  <meta property="og:title" content="Pilates Vita" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.pilatesvita.com/" />
+  <meta property='og:image' content='http://static1.squarespace.com/static/5cbf4c0f7d0c9122a51c8d0f/t/5ccf7e44eb3931597f98dca8/1557102149578/pilates-vita-logo.png?format=1500w' />
+
+  <!-- Theme (aligned with pilates-6-principles.html rebuilds) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body { font-family: 'Lato', sans-serif; color:#111827; background:#fcfcfc; }
+    h1,h2,h3,h4,.serif { font-family: 'Playfair Display', serif; }
+    .hero-overlay { background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.70)); }
+    .smooth-scroll { scroll-behavior: smooth; }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.10), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+  </style>
+</head>
+
+<body class="smooth-scroll antialiased selection:bg-teal-100 selection:text-teal-900">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="/" class="flex items-center gap-2">
+          <i data-lucide="activity" class="h-6 w-6 text-teal-600"></i>
+          <span class="serif font-bold text-xl tracking-wide text-gray-900">Pilates<span class="text-teal-600">Vita</span></span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/booking" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Booking</a>
+          <a href="/sessions" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Session Types</a>
+          <a href="/reviews" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Testimonials</a>
+          <a href="/about" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Our Story</a>
+          <a href="/contact" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Contact</a>
+
+          <a href="/intro-session"
+             class="inline-flex items-center gap-2 bg-teal-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-teal-700 transition-colors">
+            <i data-lucide="sparkles" class="h-4 w-4"></i>
+            10% Off Your First Private Session
+          </a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="mobileBtn" class="text-gray-700 hover:text-teal-600" aria-label="Open menu">
+            <i data-lucide="menu" class="h-6 w-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3">
+        <a href="/booking" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Booking</a>
+        <a href="/sessions" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Session Types</a>
+        <a href="/reviews" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Testimonials</a>
+        <a href="/about" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Our Story</a>
+        <a href="/certification" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Certification</a>
+        <a href="/contact" class="py-2 text-gray-700 hover:text-teal-700 font-medium">Contact</a>
+        <a href="/intro-session" class="mt-2 inline-flex justify-center items-center gap-2 bg-teal-600 text-white px-5 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors">
+          <i data-lucide="sparkles" class="h-4 w-4"></i>
+          10% Off Your First Private Session
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="top" class="relative min-h-[92vh] flex items-center text-white overflow-hidden pt-20">
+    <div class="absolute inset-0">
+      <img src="https://storage.googleapis.com/imagesu/pilates/pilates2.jpg" alt="Pilates Vita studio" class="w-full h-full object-cover object-center" />
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+      <div class="max-w-3xl">
+        <p class="text-teal-300 font-bold tracking-widest uppercase mb-4 text-sm md:text-base">South Kensington, London</p>
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">Pilates Vita</h1>
+        <p class="text-xl md:text-2xl font-light opacity-90 mb-8">Classical & Contemporary real Pilates tailored to your body.</p>
+        <p class="text-base md:text-lg text-white/85 mb-10">Private Sessions • Master Teachers • Luxurious Studio</p>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="/intro-session"
+             class="inline-flex items-center justify-center gap-2 bg-teal-600 text-white px-7 py-3.5 rounded-full font-semibold hover:bg-teal-700 transition-all transform hover:scale-105 shadow-lg">
+            <i data-lucide="calendar-check" class="h-4 w-4"></i>
+            10% Off Your First Private Session
+          </a>
+          <a href="/sessions"
+             class="inline-flex items-center justify-center gap-2 bg-white text-teal-900 px-7 py-3.5 rounded-full font-semibold hover:bg-teal-50 transition-colors">
+            <i data-lucide="list" class="h-4 w-4"></i>
+            View Session Types
+          </a>
+          <a href="#gallery"
+             class="inline-flex items-center justify-center gap-2 bg-white/10 text-white px-7 py-3.5 rounded-full font-semibold border border-white/25 hover:bg-white/15 transition-colors">
+            <i data-lucide="images" class="h-4 w-4"></i>
+            Studio Gallery
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Photo Feature -->
+  <section class="py-20 bg-white" id="photo">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-5">
+          <p class="text-xs font-bold uppercase tracking-wider text-teal-600">The experience</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">A studio designed for focus and results</h2>
+          <p class="text-gray-600 mt-5 leading-relaxed">
+            Train on premium apparatus with meticulous attention to technique, form and precision.
+            Sessions are private and fully personalised—so you get the guidance and care you deserve.
+          </p>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="/booking" class="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors">
+              Book a Session <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
+            <a href="/our-instructors-1" class="inline-flex items-center gap-2 bg-white text-gray-800 px-6 py-3 rounded-full font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+              Meet the Instructors <i data-lucide="users" class="h-4 w-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="bg-gray-50 rounded-3xl border border-gray-100 overflow-hidden shadow-sm">
+            <img src="https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/1557264102033-EH250W4VL300VWE886WX/IMG_2461.jpeg" alt="Pilates Vita photo" class="w-full h-[420px] md:h-[520px] object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tailored to your goals -->
+  <section class="py-20 bg-gray-50" id="tailored">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-5">
+          <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Tailored to your goals</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">A private, attentive approach to Pilates</h2>
+          <p class="text-gray-600 mt-5 leading-relaxed">
+            Transform mind, body and life with sessions crafted specifically for you—with personalised feedback and
+            empathetic support from Master Physio-Pilates instructors.
+          </p>
+          <div class="mt-7 space-y-3 text-gray-700">
+            <div class="flex gap-3">
+              <div class="h-9 w-9 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="badge-check" class="h-5 w-5 text-teal-700"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Precision coaching</p>
+                <p class="text-sm text-gray-600">Technique-first training to help you progress safely and efficiently.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="h-9 w-9 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="heart-pulse" class="h-5 w-5 text-teal-700"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Recovery & performance</p>
+                <p class="text-sm text-gray-600">Support for posture, injury recovery, pregnancy, or athletic goals.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="h-9 w-9 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="sparkles" class="h-5 w-5 text-teal-700"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Contrology, refined</p>
+                <p class="text-sm text-gray-600">Rooted in Joseph Pilates’ method—adapted for modern practice.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <a href="/intro-session" class="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors">
+              Try your first session and get 10% off <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="bg-white rounded-3xl border border-gray-100 p-8 md:p-10 shadow-sm">
+            <p class="text-xs font-bold uppercase tracking-wider text-gray-500">What you can expect</p>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mt-3">Your programme, built around you</h3>
+
+            <div class="mt-7 grid sm:grid-cols-2 gap-5">
+              <div class="bg-gray-50 rounded-2xl border border-gray-100 p-6 card-hover transition-all duration-300">
+                <p class="font-semibold text-gray-900">Assessment & plan</p>
+                <p class="text-sm text-gray-600 mt-2">We start with movement goals, history, and a tailored progression.</p>
+              </div>
+              <div class="bg-gray-50 rounded-2xl border border-gray-100 p-6 card-hover transition-all duration-300">
+                <p class="font-semibold text-gray-900">Hands-on coaching</p>
+                <p class="text-sm text-gray-600 mt-2">Clear cues and alignment corrections so you move with confidence.</p>
+              </div>
+              <div class="bg-gray-50 rounded-2xl border border-gray-100 p-6 card-hover transition-all duration-300">
+                <p class="font-semibold text-gray-900">Equipment variety</p>
+                <p class="text-sm text-gray-600 mt-2">Reformer, Cadillac, Chair and more—selected for your objectives.</p>
+              </div>
+              <div class="bg-gray-50 rounded-2xl border border-gray-100 p-6 card-hover transition-all duration-300">
+                <p class="font-semibold text-gray-900">Measurable progress</p>
+                <p class="text-sm text-gray-600 mt-2">Strength, posture and flexibility improvements you can feel.</p>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="/sessions" class="inline-flex justify-center items-center gap-2 bg-white text-teal-800 px-6 py-3 rounded-full font-semibold border border-teal-200 hover:bg-teal-50 transition-colors">
+                Sessions and prices <i data-lucide="tag" class="h-4 w-4"></i>
+              </a>
+              <a href="/booking" class="inline-flex justify-center items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors">
+                Book now <i data-lucide="calendar" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Session Types (Accordion) -->
+  <section class="py-20 bg-white" id="sessions">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center">
+        <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Session types</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Find the right Pilates session for you</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Choose the format that best matches your goals, schedule and support needs.</p>
+      </div>
+
+      <div class="mt-10 bg-gray-50 rounded-3xl border border-gray-100 overflow-hidden">
+        <div class="divide-y divide-gray-200" id="accordion">
+          <button class="w-full text-left p-6 md:p-7 accordion-btn" aria-expanded="false">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="font-semibold text-gray-900 text-lg">Private 1-1 Sessions</p>
+                <p class="text-sm text-gray-600 mt-1">Tailored support for strength, flexibility, or recovery.</p>
+              </div>
+              <i data-lucide="chevron-down" class="h-5 w-5 text-teal-700 flex-shrink-0 accordion-icon"></i>
+            </div>
+          </button>
+          <div class="hidden px-6 md:px-7 pb-6 md:pb-7 accordion-panel">
+            <p class="text-gray-600 leading-relaxed">Unlock your potential with a fully personalised programme and precise, hands-on coaching for faster progress.</p>
+            <div class="mt-4">
+              <a href="/booking" class="inline-flex items-center gap-2 text-teal-700 font-semibold hover:text-teal-800">Book a private session <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+            </div>
+          </div>
+
+          <button class="w-full text-left p-6 md:p-7 accordion-btn" aria-expanded="false">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="font-semibold text-gray-900 text-lg">Duet / Trio Sessions</p>
+                <p class="text-sm text-gray-600 mt-1">Train with friends or family and share motivation.</p>
+              </div>
+              <i data-lucide="chevron-down" class="h-5 w-5 text-teal-700 flex-shrink-0 accordion-icon"></i>
+            </div>
+          </button>
+          <div class="hidden px-6 md:px-7 pb-6 md:pb-7 accordion-panel">
+            <p class="text-gray-600 leading-relaxed">A great option if you enjoy training together while still receiving meaningful individual guidance.</p>
+            <div class="mt-4">
+              <a href="/sessions" class="inline-flex items-center gap-2 text-teal-700 font-semibold hover:text-teal-800">See duet/trio options <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+            </div>
+          </div>
+
+          <button class="w-full text-left p-6 md:p-7 accordion-btn" aria-expanded="false">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="font-semibold text-gray-900 text-lg">Pre- &amp; Post-Natal Sessions</p>
+                <p class="text-sm text-gray-600 mt-1">Safe, effective support through pregnancy and postpartum.</p>
+              </div>
+              <i data-lucide="chevron-down" class="h-5 w-5 text-teal-700 flex-shrink-0 accordion-icon"></i>
+            </div>
+          </button>
+          <div class="hidden px-6 md:px-7 pb-6 md:pb-7 accordion-panel">
+            <p class="text-gray-600 leading-relaxed">Maintain strength and mobility, reduce discomfort, and promote recovery with specialised programming.</p>
+            <div class="mt-4">
+              <a href="/contact" class="inline-flex items-center gap-2 text-teal-700 font-semibold hover:text-teal-800">Ask about availability <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+            </div>
+          </div>
+
+          <button class="w-full text-left p-6 md:p-7 accordion-btn" aria-expanded="false">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="font-semibold text-gray-900 text-lg">Reformer &amp; Cardio Sessions</p>
+                <p class="text-sm text-gray-600 mt-1">Strength, flexibility and heart health in one programme.</p>
+              </div>
+              <i data-lucide="chevron-down" class="h-5 w-5 text-teal-700 flex-shrink-0 accordion-icon"></i>
+            </div>
+          </button>
+          <div class="hidden px-6 md:px-7 pb-6 md:pb-7 accordion-panel">
+            <p class="text-gray-600 leading-relaxed">A higher-energy option for clients who want more conditioning while keeping Pilates precision.</p>
+            <div class="mt-4">
+              <a href="/sessions" class="inline-flex items-center gap-2 text-teal-700 font-semibold hover:text-teal-800">Explore session formats <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+            </div>
+          </div>
+
+          <button class="w-full text-left p-6 md:p-7 accordion-btn" aria-expanded="false">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="font-semibold text-gray-900 text-lg">Men’s Pilates Sessions</p>
+                <p class="text-sm text-gray-600 mt-1">Core strength, mobility and athletic performance.</p>
+              </div>
+              <i data-lucide="chevron-down" class="h-5 w-5 text-teal-700 flex-shrink-0 accordion-icon"></i>
+            </div>
+          </button>
+          <div class="hidden px-6 md:px-7 pb-6 md:pb-7 accordion-panel">
+            <p class="text-gray-600 leading-relaxed">Designed to build functional strength and flexibility for sport, work and daily movement quality.</p>
+            <div class="mt-4">
+              <a href="/booking" class="inline-flex items-center gap-2 text-teal-700 font-semibold hover:text-teal-800">Book a session <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-7 md:p-8 border-t border-gray-200 bg-white">
+          <a href="/sessions" class="inline-flex items-center justify-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors w-full sm:w-auto">
+            All sessions and prices <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-gray-50" id="testimonials">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center">
+        <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Testimonials</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">What some of our clients say</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">A few recent highlights—read the full collection on our testimonials page.</p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm card-hover transition-all duration-300">
+          <img src="https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/0e9886ce-e668-49a9-a76a-cf2d95b397ec/London+Pilates+Testimonial.png" alt="Pilates Vita review" class="w-full h-64 object-cover" />
+        </div>
+
+        <div class="bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm card-hover transition-all duration-300">
+          <img src="https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/0e9886ce-e668-49a9-a76a-cf2d95b397ec/London+Pilates+Testimonial.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/0e9886ce-e668-49a9-a76a-cf2d95b397ec/London+Pilates+Testimonial.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/0e9886ce-e668-49a9-a76a-cf2d95b397ec/London+Pilates+Testimonial.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/0e9886ce-e668-49a9-a76a-cf2d95b397ec/London+Pilates+Testimonial.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/0e9886ce-e668-49a9-a76a-cf2d95b397ec/London+Pilates+Testimonial.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/0e9886ce-e668-49a9-a76a-cf2d95b397ec/London+Pilates+Testimonial.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/0e9886ce-e668-49a9-a76a-cf2d95b397ec/London+Pilates+Testimonial.png?format=2500w 2500w" alt="Pilates Vita review" class="w-full h-64 object-cover" />
+        </div>
+
+        <div class="bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm card-hover transition-all duration-300">
+          <img src="https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/98b7a47b-ac87-4826-9918-6c33e163fa8d/Pilates+Vita+Review.png" alt="Pilates Vita review" class="w-full h-64 object-cover" />
+        </div>
+
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="/reviews" class="inline-flex items-center gap-2 bg-white text-teal-800 px-7 py-3 rounded-full font-semibold border border-teal-200 hover:bg-teal-50 transition-colors">
+          Read more testimonials <i data-lucide="arrow-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-20 bg-white" id="about">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-7">
+          <p class="text-xs font-bold uppercase tracking-wider text-teal-600">About Pilates Vita</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Discover the difference</h2>
+          <div class="mt-6 space-y-4 text-gray-600 leading-relaxed">
+            <p>
+              At Pilates Vita, you begin a transformative journey with Master Physio-Pilates instructors, tailored exclusively to you.
+              We follow Joseph Pilates’ method, “Contrology,” refined for modern practice.
+            </p>
+            <p>
+              Every aspect of your training is designed with your needs and goals in mind—reshaping posture, aiding injury recovery,
+              supporting pregnancy and postpartum, and helping you become stronger, fitter, and more flexible in a matter of weeks.
+            </p>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="/about" class="inline-flex items-center justify-center gap-2 bg-teal-600 text-white px-7 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors">
+              Learn more about Pilates Vita <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
+            <a href="/introduction-to-pilates" class="inline-flex items-center justify-center gap-2 bg-white text-gray-800 px-7 py-3 rounded-full font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+              What is Pilates? <i data-lucide="book-open" class="h-4 w-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <aside class="lg:col-span-5">
+          <div class="bg-gray-50 rounded-3xl border border-gray-100 p-8 md:p-10 shadow-sm">
+            <p class="text-xs font-bold uppercase tracking-wider text-gray-500">Quick links</p>
+            <h3 class="text-2xl font-bold text-gray-900 mt-3">Start here</h3>
+
+            <div class="mt-6 space-y-3">
+              <a href="/intro-session" class="flex items-center justify-between gap-4 bg-white rounded-2xl border border-gray-100 p-5 hover:bg-teal-50 transition-colors">
+                <span class="font-semibold text-gray-900">Intro session offer</span>
+                <i data-lucide="arrow-right" class="h-4 w-4 text-teal-700"></i>
+              </a>
+              <a href="/seven-principles-of-pilates" class="flex items-center justify-between gap-4 bg-white rounded-2xl border border-gray-100 p-5 hover:bg-teal-50 transition-colors">
+                <span class="font-semibold text-gray-900">Seven principles of Pilates</span>
+                <i data-lucide="arrow-right" class="h-4 w-4 text-teal-700"></i>
+              </a>
+              <a href="/certification" class="flex items-center justify-between gap-4 bg-white rounded-2xl border border-gray-100 p-5 hover:bg-teal-50 transition-colors">
+                <span class="font-semibold text-gray-900">Instructor certification</span>
+                <i data-lucide="arrow-right" class="h-4 w-4 text-teal-700"></i>
+              </a>
+              <a href="/contact" class="flex items-center justify-between gap-4 bg-white rounded-2xl border border-gray-100 p-5 hover:bg-teal-50 transition-colors">
+                <span class="font-semibold text-gray-900">Contact the studio</span>
+                <i data-lucide="arrow-right" class="h-4 w-4 text-teal-700"></i>
+              </a>
+            </div>
+
+            <div class="mt-8">
+              <div class="flex items-center gap-3 text-gray-700">
+                <i data-lucide="map-pin" class="h-5 w-5 text-teal-700"></i>
+                <span class="text-sm">109 Gloucester Rd., South Kensington, SW7 4SS</span>
+              </div>
+              <div class="flex items-center gap-3 text-gray-700 mt-2">
+                <i data-lucide="phone" class="h-5 w-5 text-teal-700"></i>
+                <a class="text-sm hover:text-teal-800" href="tel:+447833123833">+44 (0)7 833 123 833</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="py-20 bg-gray-900 text-white" id="gallery">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div>
+          <p class="text-teal-300 font-bold tracking-widest uppercase text-xs">Studio gallery</p>
+          <h2 class="text-3xl md:text-4xl font-bold mt-3">A look inside Pilates Vita</h2>
+          <p class="text-white/70 mt-4 max-w-2xl">Swipe or use the arrows to browse the gallery.</p>
+        </div>
+
+        <div class="flex gap-3">
+          <button id="prev" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 px-5 py-3 rounded-full font-semibold transition-colors">
+            <i data-lucide="chevron-left" class="h-4 w-4"></i> Prev
+          </button>
+          <button id="next" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 px-5 py-3 rounded-full font-semibold transition-colors">
+            Next <i data-lucide="chevron-right" class="h-4 w-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-10 rounded-3xl overflow-hidden border border-white/10 bg-black/20">
+        <div class="relative">
+          <img id="carouselImg" src="https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/1557083966124-U7FS42TFR1QSTGNYFWO9/IMG_2465.jpg" alt="Pilates Vita gallery" class="w-full h-[420px] md:h-[520px] object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 flex items-center justify-between">
+            <div class="text-white/85 text-sm">
+              <span class="font-semibold">Image</span> <span id="counter">1</span> / <span id="total">3</span>
+            </div>
+            <a href="/contact" class="hidden sm:inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors">
+              Visit the studio <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+        <div class="flex items-center gap-3">
+          <i data-lucide="activity" class="h-6 w-6 text-teal-500"></i>
+          <div>
+            <span class="serif font-bold text-2xl text-white">Pilates<span class="text-teal-600">Vita</span></span>
+            <p class="text-sm mt-2">109 Gloucester Rd., South Kensington, SW7 4SS, London, United Kingdom</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3 text-sm">
+          <a href="tel:+447833123833" class="hover:text-white transition-colors inline-flex items-center gap-2">
+            <i data-lucide="phone" class="h-4 w-4"></i> 07833 123833
+          </a>
+          <a href="https://wa.me/447833123833" target="_blank" rel="noopener" class="hover:text-white transition-colors inline-flex items-center gap-2">
+            <i data-lucide="message-circle" class="h-4 w-4"></i> WhatsApp
+          </a>
+          <a href="mailto:patricia.patricia@mac.com" class="hover:text-white transition-colors inline-flex items-center gap-2 break-all">
+            <i data-lucide="mail" class="h-4 w-4"></i> patricia.patricia@mac.com
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-10 pt-8 text-center text-xs text-gray-500">
+        <p>&copy; <span id="year"></span> Pilates Vita. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Navbar shadow on scroll
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-md');
+        navbar.classList.add('bg-white/95');
+      } else {
+        navbar.classList.remove('shadow-md');
+        navbar.classList.remove('bg-white/95');
+        navbar.classList.add('bg-white/90');
+      }
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    document.getElementById('mobileBtn')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // Accordion
+    document.querySelectorAll('.accordion-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const panel = btn.nextElementSibling;
+        const icon = btn.querySelector('.accordion-icon');
+        panel.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+      });
+    });
+
+    // Gallery carousel
+    const images = ['https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/1557083966124-U7FS42TFR1QSTGNYFWO9/IMG_2465.jpg','https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/1557083927175-581XQAXVKK8W91MNN0W5/IMG_2442.jpg','https://images.squarespace-cdn.com/content/v1/5cbf4c0f7d0c9122a51c8d0f/1557083910092-KNW4VG2KAH6Q52QGLUQ8/IMG_1782.jpg'];
+    let idx = 0;
+    const imgEl = document.getElementById('carouselImg');
+    const counterEl = document.getElementById('counter');
+    const totalEl = document.getElementById('total');
+    totalEl.textContent = images.length;
+
+    function render() {
+      imgEl.src = images[idx];
+      counterEl.textContent = String(idx + 1);
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+      idx = (idx - 1 + images.length) % images.length;
+      render();
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      idx = (idx + 1) % images.length;
+      render();
+    });
+
+    // Swipe support
+    let startX = null;
+    imgEl.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    }, {passive:true});
+    imgEl.addEventListener('touchend', (e) => {
+      if (startX === null) return;
+      const endX = e.changedTouches[0].clientX;
+      const diff = endX - startX;
+      if (Math.abs(diff) > 40) {
+        idx = diff > 0 ? (idx - 1 + images.length) % images.length : (idx + 1) % images.length;
+        render();
+      }
+      startX = null;
+    });
+  </script>
+</body>
+</html>

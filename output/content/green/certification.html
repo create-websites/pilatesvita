@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Instructor Certification interest form for Pilates Vita. Submit your details and we will reach out with program information." />
+  <title>Certification | Pilates Vita</title>
+
+  <!-- Tailwind + Fonts (aligned with pilates-6-principles.html theme) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body { font-family: 'Lato', sans-serif; color:#111827; background:#fcfcfc; }
+    h1,h2,h3,h4,.serif { font-family: 'Playfair Display', serif; }
+    .hero-overlay { background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.60)); }
+    .smooth-scroll { scroll-behavior: smooth; }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.10), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+    input:focus, textarea:focus { outline: none; }
+  </style>
+</head>
+
+<body class="smooth-scroll antialiased selection:bg-teal-100 selection:text-teal-900">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="/" class="flex-shrink-0 flex items-center gap-2">
+          <i data-lucide="activity" class="h-6 w-6 text-teal-600"></i>
+          <span class="serif font-bold text-xl tracking-wide text-gray-900">Pilates<span class="text-teal-600">Vita</span></span>
+        </a>
+
+        <div class="hidden md:flex space-x-8">
+          <a href="/booking" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Booking</a>
+          <a href="/sessions" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Session Types</a>
+          <a href="/reviews" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Testimonials</a>
+          <a href="/contact" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Contact</a>
+          <a href="#apply" class="text-gray-600 hover:text-teal-600 transition-colors font-medium">Apply</a>
+        </div>
+
+        <div class="md:hidden">
+          <button class="text-gray-600 hover:text-teal-600" aria-label="Menu">
+            <i data-lucide="menu" class="h-6 w-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative min-h-[80vh] flex items-center justify-center text-white overflow-hidden pt-20">
+    <div class="absolute inset-0">
+      <img
+        src="https://storage.googleapis.com/imagesu/pilates/pilates2.jpg"
+        alt="Pilates Vita instructor certification"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <p class="text-teal-300 font-bold tracking-widest uppercase mb-4 text-sm md:text-base">Professional Pathway</p>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Instructor Certification</h1>
+      <p class="text-xl md:text-2xl font-light opacity-90 mb-10 max-w-3xl mx-auto">
+        If you are interested in training at Pilates Vita to become a certified Pilates instructor, submit the form below and we’ll reach out with the information you will need.
+      </p>
+      <a href="#apply" class="inline-flex items-center gap-2 bg-teal-600 text-white px-8 py-4 rounded-full font-medium hover:bg-teal-700 transition-all transform hover:scale-105 shadow-lg">
+        Apply for Information
+        <i data-lucide="arrow-down" class="h-4 w-4"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="py-20 bg-white" id="apply">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Intro -->
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <div class="flex justify-center mb-5">
+          <i data-lucide="graduation-cap" class="h-10 w-10 text-teal-600"></i>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-5 text-gray-900">Request Certification Details</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Share a few details and we will respond as soon as possible with next steps, schedules, and program information.
+          This page preserves the original intent of the Certification Interest Form (Name, Email, Phone, Message). 
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <!-- Form Card -->
+        <section class="lg:col-span-7 bg-gray-50 rounded-3xl border border-gray-100 p-8 md:p-10">
+          <div class="flex items-start justify-between gap-4 mb-8">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Certification Interest Form</p>
+              <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mt-2">Tell us about you</h3>
+              <p class="text-sm text-gray-600 mt-3">
+                Required fields are marked. Submitting will open your email client with a pre-filled message to our team.
+              </p>
+            </div>
+            <div class="hidden sm:flex h-12 w-12 rounded-full bg-teal-100 items-center justify-center">
+              <i data-lucide="file-text" class="h-6 w-6 text-teal-700"></i>
+            </div>
+          </div>
+
+          <form id="certForm" class="space-y-6" novalidate>
+            <div class="grid md:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-sm font-semibold text-gray-800">Name <span class="text-teal-700">*</span></label>
+                <input id="name" name="name" type="text" required
+                       class="mt-2 w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-teal-400 focus:ring-2 focus:ring-teal-100"
+                       placeholder="First and last name" />
+                <p class="mt-2 text-xs text-gray-500">Used to address your application.</p>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-semibold text-gray-800">Email <span class="text-teal-700">*</span></label>
+                <input id="email" name="email" type="email" required
+                       class="mt-2 w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-teal-400 focus:ring-2 focus:ring-teal-100"
+                       placeholder="you@example.com" />
+                <p class="mt-2 text-xs text-gray-500">We will reply with program information.</p>
+              </div>
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-gray-800">Phone</label>
+              <input id="phone" name="phone" type="tel"
+                     class="mt-2 w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-teal-400 focus:ring-2 focus:ring-teal-100"
+                     placeholder="+44 …" />
+              <p class="mt-2 text-xs text-gray-500">Optional—helpful if you prefer a call or WhatsApp.</p>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-semibold text-gray-800">Message</label>
+              <textarea id="message" name="message" rows="6"
+                        class="mt-2 w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-teal-400 focus:ring-2 focus:ring-teal-100"
+                        placeholder="Tell us about your background and what you hope to achieve."></textarea>
+              <p class="mt-2 text-xs text-gray-500">
+                Suggested: training goals, prior Pilates experience, and timing/availability.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <button type="submit"
+                      class="inline-flex items-center justify-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors w-full sm:w-auto">
+                Send Message
+                <i data-lucide="send" class="h-4 w-4"></i>
+              </button>
+              <a href="mailto:patricia.patricia@mac.com?subject=Certification%20Interest%20%E2%80%94%20Pilates%20Vita"
+                 class="inline-flex items-center justify-center gap-2 bg-white text-teal-800 px-6 py-3 rounded-full font-semibold border border-teal-200 hover:bg-teal-50 transition-colors w-full sm:w-auto">
+                Email Directly
+                <i data-lucide="mail" class="h-4 w-4"></i>
+              </a>
+            </div>
+
+            <p id="formError" class="hidden text-sm text-red-600 mt-2"></p>
+            <p class="text-xs text-gray-500">
+              By submitting, you consent to being contacted by Pilates Vita regarding certification information.
+            </p>
+          </form>
+        </section>
+
+        <!-- Info Cards -->
+        <aside class="lg:col-span-5 space-y-6">
+          <div class="bg-gray-50 rounded-3xl border border-gray-100 p-7 transition-all duration-300 card-hover">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-teal-600">What happens next</p>
+                <h3 class="text-2xl font-bold text-gray-900 mt-2">Our follow-up</h3>
+                <p class="text-sm text-gray-600 mt-3">
+                  We will review your details and respond with the certification pathway, requirements, and available dates.
+                </p>
+              </div>
+              <div class="h-12 w-12 rounded-full bg-teal-100 flex items-center justify-center">
+                <i data-lucide="route" class="h-6 w-6 text-teal-700"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-3xl border border-gray-100 p-7 transition-all duration-300 card-hover">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-teal-600">Practical details</p>
+                <h3 class="text-2xl font-bold text-gray-900 mt-2">What to include</h3>
+                <ul class="mt-4 space-y-3 text-sm text-gray-600">
+                  <li class="flex items-start gap-3">
+                    <div class="mt-0.5 bg-teal-100 rounded-full p-1">
+                      <i data-lucide="check" class="h-4 w-4 text-teal-700"></i>
+                    </div>
+                    <span>Your current experience (mat, reformer, apparatus, teaching background)</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="mt-0.5 bg-teal-100 rounded-full p-1">
+                      <i data-lucide="check" class="h-4 w-4 text-teal-700"></i>
+                    </div>
+                    <span>Your goals (teaching, deepening practice, rehab, athletic conditioning)</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="mt-0.5 bg-teal-100 rounded-full p-1">
+                      <i data-lucide="check" class="h-4 w-4 text-teal-700"></i>
+                    </div>
+                    <span>Timeframe and availability</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="h-12 w-12 rounded-full bg-teal-100 flex items-center justify-center">
+                <i data-lucide="list-checks" class="h-6 w-6 text-teal-700"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-teal-900 text-white rounded-3xl overflow-hidden">
+            <div class="p-8">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-teal-300 font-bold tracking-widest uppercase mb-2 text-xs">Contact Options</p>
+                  <h3 class="text-2xl font-bold mb-3">Prefer to reach out directly?</h3>
+                  <p class="text-teal-100 text-sm leading-relaxed">
+                    You can also contact us by phone or WhatsApp, and we will guide you to the right next steps.
+                  </p>
+                </div>
+                <div class="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center">
+                  <i data-lucide="phone" class="h-6 w-6 text-teal-200"></i>
+                </div>
+              </div>
+
+              <div class="mt-6 space-y-3 text-sm">
+                <a href="tel:+447833123833" class="inline-flex items-center gap-2 hover:text-teal-200 transition-colors">
+                  <i data-lucide="phone-call" class="h-4 w-4"></i> +44 (0)7 833 123 833
+                </a>
+                <a href="https://wa.me/447833123833" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-teal-200 transition-colors">
+                  <i data-lucide="message-circle" class="h-4 w-4"></i> WhatsApp: 07833 123833
+                </a>
+                <a href="mailto:patricia.patricia@mac.com" class="inline-flex items-center gap-2 hover:text-teal-200 transition-colors break-all">
+                  <i data-lucide="mail" class="h-4 w-4"></i> patricia.patricia@mac.com
+                </a>
+                <a href="/policies" class="inline-flex items-center gap-2 hover:text-teal-200 transition-colors">
+                  <i data-lucide="shield-check" class="h-4 w-4"></i> Booking &amp; Cancellation Policy
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div>
+          <span class="serif font-bold text-2xl text-white">Pilates<span class="text-teal-600">Vita</span></span>
+          <p class="text-sm mt-2">109 Gloucester Rd., South Kensington, SW7 4SS, London, United Kingdom</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 text-sm">
+          <a href="tel:+447833123833" class="hover:text-white transition-colors inline-flex items-center gap-2">
+            <i data-lucide="phone" class="h-4 w-4"></i> 07833 123833
+          </a>
+          <a href="https://wa.me/447833123833" target="_blank" rel="noopener" class="hover:text-white transition-colors inline-flex items-center gap-2">
+            <i data-lucide="message-circle" class="h-4 w-4"></i> WhatsApp
+          </a>
+          <a href="mailto:patricia.patricia@mac.com" class="hover:text-white transition-colors inline-flex items-center gap-2 break-all">
+            <i data-lucide="mail" class="h-4 w-4"></i> patricia.patricia@mac.com
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-xs text-gray-500">
+        <p>&copy; <span id="year"></span> Pilates Vita. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Navbar shadow on scroll
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-md');
+        navbar.classList.add('bg-white/95');
+      } else {
+        navbar.classList.remove('shadow-md');
+        navbar.classList.remove('bg-white/95');
+        navbar.classList.add('bg-white/90');
+      }
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form handling: open mail client with prefilled message (works on static hosting)
+    const form = document.getElementById('certForm');
+    const err = document.getElementById('formError');
+
+    function encode(s) { return encodeURIComponent((s || '').trim()); }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      err.classList.add('hidden');
+      err.textContent = '';
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email) {
+        err.textContent = 'Please provide your name and email address.';
+        err.classList.remove('hidden');
+        return;
+      }
+
+      const subject = `Certification Interest — Pilates Vita (${name})`;
+      const bodyLines = [
+        'Certification Interest Form',
+        '',
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Phone: ${phone || '(not provided)'}`,
+        '',
+        'Message:',
+        message || '(none)',
+        '',
+        '— Sent from Pilates Vita website'
+      ];
+
+      const mailto = `mailto:patricia.patricia@mac.com?subject=${encode(subject)}&body=${encode(bodyLines.join('\n'))}`;
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
