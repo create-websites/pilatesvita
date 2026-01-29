@@ -7,14 +7,18 @@
     <title>The Studio — Pilates Vita</title>
 
     <!-- Tailwind (CDN for quick static prototype) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+  <!-- Shared Styles -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        ink: "#0b1b3a",
-                        ink2: "#0a1630",
+                        ink: "#9eb5c7",
+                        ink2: "#9eb5c7",
                     },
                     boxShadow: {
                         soft: "0 12px 40px rgba(15, 23, 42, 0.10)",
@@ -40,7 +44,7 @@
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
         <div class="mx-auto max-w-6xl px-4">
-            <div class="flex items-center justify-between py-3">
+            <div class="flex items-center justify-between py-5">
                 <!-- Mobile menu button -->
                 <button id="menuBtn"
                     class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
@@ -57,7 +61,7 @@
                 </a>
 
                 <!-- Desktop nav -->
-                <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <nav class="hidden md:flex items-center gap-6 text-base font-medium">
                     <a class="hover:text-ink" href="./index.html">Home</a>
                     <a class="hover:text-ink" href="./booking.html">Booking</a>
                     <a class="hover:text-ink" href="./sessions.html">Session Types</a>
@@ -154,7 +158,7 @@
         <!-- Hero -->
         <section class="bg-slate-50">
             <div class="mx-auto max-w-4xl px-4 py-16 text-center">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-ink">
                     The Studio
                 </h1>
                 <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
@@ -170,7 +174,7 @@
                 <!-- Pilates Equipment -->
                 <div class="rounded-3xl border border-slate-200 shadow-soft overflow-hidden mb-10">
                     <div class="p-8 md:p-10">
-                        <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Pilates Equipment</h2>
+                        <h2 class="text-2xl font-semibold tracking-tight text-ink">Pilates Equipment</h2>
                         <p class="mt-4 text-slate-700 leading-relaxed">
                             Joseph Pilates developed a unique system that incorporates specially designed equipment
                             alongside mat work. These apparatuses utilise straps, springs, and supports to create
@@ -198,7 +202,7 @@
 
                     <!-- Pilates Sessions -->
                     <div class="rounded-3xl border border-slate-200 shadow-soft p-8">
-                        <h3 class="text-xl font-semibold tracking-tight text-slate-900">Pilates Sessions</h3>
+                        <h3 class="text-xl font-semibold tracking-tight text-ink">Pilates Sessions</h3>
                         <p class="mt-4 text-slate-700 leading-relaxed">
                             Pilates improves balance, coordination, muscle tone, core strength, flexibility, and
                             posture. Whether you're a beginner, intermediate, or advanced client, you can work around
@@ -210,7 +214,7 @@
 
                     <!-- Physiotherapy -->
                     <div class="rounded-3xl border border-slate-200 shadow-soft p-8">
-                        <h3 class="text-xl font-semibold tracking-tight text-slate-900">Physiotherapy</h3>
+                        <h3 class="text-xl font-semibold tracking-tight text-ink">Physiotherapy</h3>
                         <p class="mt-4 text-slate-700 leading-relaxed">
                             We integrate physiotherapy principles into our Pilates sessions, enhancing each workout's
                             benefits. Trained to apply techniques promoting mindful movement, alleviating discomfort,
@@ -223,7 +227,7 @@
 
                     <!-- Reformer -->
                     <div class="rounded-3xl border border-slate-200 shadow-soft p-8">
-                        <h3 class="text-xl font-semibold tracking-tight text-slate-900">Reformer</h3>
+                        <h3 class="text-xl font-semibold tracking-tight text-ink">Reformer</h3>
                         <p class="mt-4 text-slate-700 leading-relaxed">
                             The reformer is a versatile piece of equipment featuring a moving carriage attached to
                             springs for resistance. It offers a comprehensive full-body workout suitable for individuals
@@ -236,7 +240,7 @@
 
                     <!-- Cadillac -->
                     <div class="rounded-3xl border border-slate-200 shadow-soft p-8">
-                        <h3 class="text-xl font-semibold tracking-tight text-slate-900">Cadillac</h3>
+                        <h3 class="text-xl font-semibold tracking-tight text-ink">Cadillac</h3>
                         <p class="mt-4 text-slate-700 leading-relaxed">
                             The Cadillac is a cornerstone of Pilates equipment, aptly named for its versatility and
                             myriad features. Designed by Joseph Pilates himself, it offers a comprehensive array of
@@ -247,7 +251,7 @@
 
                     <!-- Tower -->
                     <div class="rounded-3xl border border-slate-200 shadow-soft p-8">
-                        <h3 class="text-xl font-semibold tracking-tight text-slate-900">Tower</h3>
+                        <h3 class="text-xl font-semibold tracking-tight text-ink">Tower</h3>
                         <p class="mt-4 text-slate-700 leading-relaxed">
                             The Springboard, also known as the Tower, presents a vertical array of resistance springs
                             affixed to the wall, enabling clients to engage in a full-body workout while lying down,
@@ -259,7 +263,7 @@
 
                     <!-- Chair -->
                     <div class="rounded-3xl border border-slate-200 shadow-soft p-8">
-                        <h3 class="text-xl font-semibold tracking-tight text-slate-900">Chair</h3>
+                        <h3 class="text-xl font-semibold tracking-tight text-ink">Chair</h3>
                         <p class="mt-4 text-slate-700 leading-relaxed">
                             The Pilates Chair, a compact apparatus devised by Joseph Pilates, mirrors the versatility of
                             the Reformer while conserving space, originally crafted to accommodate the constraints of
@@ -271,7 +275,7 @@
 
                     <!-- Ladder Barrel -->
                     <div class="rounded-3xl border border-slate-200 shadow-soft p-8 md:col-span-2">
-                        <h3 class="text-xl font-semibold tracking-tight text-slate-900">Ladder Barrel</h3>
+                        <h3 class="text-xl font-semibold tracking-tight text-ink">Ladder Barrel</h3>
                         <p class="mt-4 text-slate-700 leading-relaxed">
                             Crafted to ignite core engagement, the Ladder Barrel targets postural muscles, enhancing
                             strength, range of motion, and spinal flexibility. Through deliberate practice, it fosters
@@ -282,7 +286,7 @@
 
                 <!-- CTA -->
                 <div class="mt-16 rounded-3xl border border-slate-200 bg-slate-50 p-8 text-center">
-                    <h2 class="text-xl font-semibold tracking-tight text-slate-900">
+                    <h2 class="text-xl font-semibold tracking-tight text-ink">
                         Experience our state-of-the-art studio
                     </h2>
                     <p class="mt-4 text-slate-600">
@@ -290,11 +294,11 @@
                     </p>
                     <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
                         <a href="./booking.html"
-                            class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800 transition">
+                            class="inline-flex items-center justify-center btn-outline rounded-full px-6 py-3 text-sm font-semibold hover:bg-ink transition">
                             Book a Session
                         </a>
                         <a href="./intro-session.html"
-                            class="inline-flex items-center justify-center rounded-full border border-slate-900 text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white transition">
+                            class="inline-flex items-center justify-center rounded-full border border-ink text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-ink hover:text-white transition">
                             10% Off First Session
                         </a>
                     </div>

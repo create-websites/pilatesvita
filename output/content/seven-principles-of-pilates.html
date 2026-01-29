@@ -9,29 +9,38 @@
     content="Learn the seven key principles of the Pilates Method: Breath, Centering, Balance, Control, Coordination, Precision, and Flow." />
 
   <!-- Tailwind (CDN for quick static prototype) -->
+  <!-- TypeKit Fonts (futura-pt, hypatia-sans-pro) -->
+  <link rel="stylesheet" href="https://use.typekit.net/iqv7zfj.css">
+
+  <!-- Tailwind (CDN for quick static prototype) -->
+
+  <!-- Shared Styles -->
+  <link rel="stylesheet" href="./styles.css">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            ink: "#0b1b3a",
-            ink2: "#0a1630",
+            ink: "#9eb5c7",
+            ink2: "#9eb5c7",
+          },
+          fontFamily: {
+            sans: ['Futura', 'Helvetica Neue', 'Arial', 'sans-serif'],
           },
           boxShadow: {
-            soft: "0 12px 40px rgba(15, 23, 42, 0.10)",
+            soft: "0 12px 40px rgba(158, 181, 199, 0.15)",
           }
         }
       }
     }
   </script>
-
   <style>
     html {
       scroll-behavior: smooth;
     }
 
-    /* Fix dropdown gap issue */
     .dropdown-menu {
       padding-top: 0.5rem;
       margin-top: -0.5rem;
@@ -43,7 +52,7 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
     <div class="mx-auto max-w-6xl px-4">
-      <div class="flex items-center justify-between py-3">
+      <div class="flex items-center justify-between py-5">
         <!-- Mobile menu button -->
         <button id="menuBtn"
           class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
@@ -59,7 +68,7 @@
         </a>
 
         <!-- Desktop nav -->
-        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav class="hidden md:flex items-center gap-6 text-base font-medium">
           <a class="hover:text-ink" href="./index.html">Home</a>
           <a class="hover:text-ink" href="./booking.html">Booking</a>
           <a class="hover:text-ink" href="./sessions.html">Session Types</a>
@@ -86,7 +95,7 @@
 
           <!-- What is Pilates dropdown -->
           <div class="relative group">
-            <a class="text-ink font-semibold inline-flex items-center gap-1 pb-2" href="./introduction-to-pilates.html">
+            <a class="text-ink font-semibold inline-flex items-center gap-1 pb-2" href="javascript:void(0)">
               What Is Pilates?
               <svg class="h-4 w-4 opacity-60" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
@@ -128,7 +137,8 @@
           <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./about.html">Our Story</a>
 
           <div class="border-t border-slate-200"></div>
-          <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">What Is Pilates?</div>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="javascript:void(0)">What Is
+            Pilates?</a>
           <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
             href="./introduction-to-pilates.html">Introduction to Pilates</a>
           <a class="block px-4 py-3 text-sm font-semibold text-ink bg-slate-50"
@@ -146,7 +156,7 @@
     <!-- Hero -->
     <section class="bg-slate-50">
       <div class="mx-auto max-w-4xl px-4 py-16 text-center">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight" style="color: #9eb5c7;">
           The Seven Principles of Pilates
         </h1>
         <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
@@ -154,12 +164,12 @@
         </p>
         <div class="mt-8 flex flex-wrap justify-center gap-4">
           <a href="./introduction-to-pilates.html"
-            class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800 transition">
-            ← Introduction to Pilates
+            class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+            ← INTRODUCTION TO PILATES
           </a>
           <a href="./booking.html"
-            class="inline-flex items-center justify-center rounded-full border border-slate-900 text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white transition">
-            Book a Session
+            class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+            BOOK A SESSION
           </a>
         </div>
       </div>
@@ -179,7 +189,7 @@
                 <path d="M3 10h18M16 19s1.5-2 2.5-2 2.5 2 2.5 2M16 22s1.5-2 2.5-2 2.5 2 2.5 2"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Breath</h3>
+            <h3 class="text-xl font-semibold tracking-tight" style="color: #9eb5c7;">Breath</h3>
             <p class="mt-4 text-slate-700 leading-relaxed">
               All exercises are performed with rhythm and dynamism, connecting heartbeat and respiration through
               perfectly timed breathing.
@@ -195,7 +205,7 @@
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Centering</h3>
+            <h3 class="text-xl font-semibold tracking-tight" style="color: #9eb5c7;">Centering</h3>
             <p class="mt-4 text-slate-700 leading-relaxed">
               All movements are controlled through the centre, or "powerhouse." Exercises are done with proper alignment
               to maintain balance in the body.
@@ -210,7 +220,7 @@
                 <path d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636L5.636 18.364"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Balance</h3>
+            <h3 class="text-xl font-semibold tracking-tight" style="color: #9eb5c7;">Balance</h3>
             <p class="mt-4 text-slate-700 leading-relaxed">
               Learn how to move your body with the precise balance required for the equipment you're using to ensure a
               safe and effective workout.
@@ -227,7 +237,7 @@
                 </path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Control</h3>
+            <h3 class="text-xl font-semibold tracking-tight" style="color: #9eb5c7;">Control</h3>
             <p class="mt-4 text-slate-700 leading-relaxed">
               When performing exercises properly, you control all your body movements. Habit does not guide the
               execution of the exercises.
@@ -244,7 +254,7 @@
                 <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Coordination</h3>
+            <h3 class="text-xl font-semibold tracking-tight" style="color: #9eb5c7;">Coordination</h3>
             <p class="mt-4 text-slate-700 leading-relaxed">
               Exercises on a Pilates apparatus require perfect coordination to be executed correctly.
             </p>
@@ -260,7 +270,7 @@
                 <circle cx="12" cy="12" r="2"></circle>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Precision</h3>
+            <h3 class="text-xl font-semibold tracking-tight" style="color: #9eb5c7;">Precision</h3>
             <p class="mt-4 text-slate-700 leading-relaxed">
               Exercises are performed with clear structure and precise form. The work emphasises quality, not quantity,
               to achieve the full benefit of each exercise.
@@ -277,7 +287,7 @@
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold tracking-tight text-slate-900">Flow</h3>
+            <h3 class="text-xl font-semibold tracking-tight" style="color: #9eb5c7;">Flow</h3>
             <p class="mt-4 text-slate-700 leading-relaxed">
               The workout is designed for one exercise to flow naturally into the next, with minimal movement between
               exercises to create maximum flow.
@@ -287,7 +297,7 @@
 
         <!-- CTA -->
         <div class="mt-16 rounded-3xl border border-slate-200 bg-slate-50 p-8 text-center">
-          <h2 class="text-xl font-semibold tracking-tight text-slate-900">
+          <h2 class="text-xl font-semibold tracking-tight" style="color: #9eb5c7;">
             Ready to Experience These Principles?
           </h2>
           <p class="mt-4 text-slate-600">
@@ -295,12 +305,12 @@
           </p>
           <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
             <a href="./booking.html"
-              class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800 transition">
-              Book a Session
+              class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+              BOOK A SESSION
             </a>
             <a href="./intro-session.html"
-              class="inline-flex items-center justify-center rounded-full border border-slate-900 text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white transition">
-              10% Off First Session
+              class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+              10% OFF FIRST SESSION
             </a>
           </div>
         </div>

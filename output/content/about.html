@@ -1,40 +1,48 @@
 <!doctype html>
 <html lang="en">
-<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US"  >
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Our Story — Pilates Vita</title>
     <title>Our Story &mdash; Pilates Vita</title>
-<meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" /><link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico"/>
-<link rel="canonical" href="https://www.pilatesvita.com/about"/>
-<meta property="og:site_name" content="Pilates Vita"/>
-<meta property="og:title" content="Our Story &mdash; Pilates Vita"/>
-<meta property="og:url" content="https://www.pilatesvita.com/about"/>
-<meta property="og:type" content="website"/>
-<meta itemprop="name" content="Our Story — Pilates Vita"/>
-<meta itemprop="url" content="https://www.pilatesvita.com/about"/>
-<meta name="twitter:title" content="Our Story — Pilates Vita"/>
-<meta name="twitter:url" content="https://www.pilatesvita.com/about"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="description" content="" />
-<link rel="preconnect" href="https://images.squarespace-cdn.com">
-<link rel="preconnect" href="https://use.typekit.net" crossorigin>
-<link rel="preconnect" href="https://p.typekit.net" crossorigin>
+    <meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" />
+    <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico" />
+    <link rel="canonical" href="https://www.pilatesvita.com/about" />
+    <meta property="og:site_name" content="Pilates Vita" />
+    <meta property="og:title" content="Our Story &mdash; Pilates Vita" />
+    <meta property="og:url" content="https://www.pilatesvita.com/about" />
+    <meta property="og:type" content="website" />
+    <meta itemprop="name" content="Our Story — Pilates Vita" />
+    <meta itemprop="url" content="https://www.pilatesvita.com/about" />
+    <meta name="twitter:title" content="Our Story — Pilates Vita" />
+    <meta name="twitter:url" content="https://www.pilatesvita.com/about" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://images.squarespace-cdn.com">
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin>
 
     <!-- Tailwind (CDN for quick static prototype) -->
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="./styles.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        ink: "#0b1b3a",
-                        ink2: "#0a1630",
+                        ink: "#9eb5c7",
+                        ink2: "#9eb5c7",
+                    },
+                    fontFamily: {
+                        sans: ['Futura', 'Helvetica Neue', 'Arial', 'sans-serif'],
                     },
                     boxShadow: {
-                        soft: "0 12px 40px rgba(15, 23, 42, 0.10)",
+                        soft: "0 12px 40px rgba(158, 181, 199, 0.15)",
                     }
                 }
             }
@@ -45,11 +53,12 @@
         html {
             scroll-behavior: smooth;
         }
-    /* Fix dropdown gap issue */
-    .dropdown-menu {
-      padding-top: 0.5rem;
-      margin-top: -0.5rem;
-    }
+
+        /* Fix dropdown gap issue */
+        .dropdown-menu {
+            padding-top: 0.5rem;
+            margin-top: -0.5rem;
+        }
     </style>
 </head>
 
@@ -57,7 +66,7 @@
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
         <div class="mx-auto max-w-6xl px-4">
-            <div class="flex items-center justify-between py-3">
+            <div class="flex items-center justify-between py-5">
                 <!-- Mobile menu button -->
                 <button id="menuBtn"
                     class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
@@ -74,7 +83,7 @@
                 </a>
 
                 <!-- Desktop nav -->
-                <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <nav class="hidden md:flex items-center gap-6 text-base font-medium">
                     <a class="hover:text-ink" href="./index.html">Home</a>
                     <a class="hover:text-ink" href="./booking.html">Booking</a>
                     <a class="hover:text-ink" href="./sessions.html">Session Types</a>
@@ -104,8 +113,7 @@
 
                     <!-- What is Pilates dropdown -->
                     <div class="relative group">
-                        <a class="hover:text-ink inline-flex items-center gap-1 pb-2"
-                            href="https://www.pilatesvita.com/what-is-pilates">
+                        <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="javascript:void(0)">
                             What Is Pilates?
                             <svg class="h-4 w-4 opacity-60" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd"
@@ -153,8 +161,8 @@
                     <div class="border-t border-slate-200"></div>
                     <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">What Is Pilates?
                     </div>
-                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
-                        href="https://www.pilatesvita.com/what-is-pilates">What Is Pilates?</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="javascript:void(0)">What Is
+                        Pilates?</a>
                     <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
                         href="./introduction-to-pilates.html">Introduction to Pilates</a>
                     <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
@@ -173,7 +181,7 @@
         <!-- Hero -->
         <section class="bg-slate-50">
             <div class="mx-auto max-w-4xl px-4 py-16 text-center">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight" style="color: #9eb5c7;">
                     Our Story
                 </h1>
                 <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
@@ -189,7 +197,7 @@
                 <!-- Pilates Vita Section -->
                 <div class="rounded-3xl border border-slate-200 shadow-soft overflow-hidden mb-10">
                     <div class="p-8 md:p-10">
-                        <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Pilates Vita</h2>
+                        <h2 class="text-2xl font-semibold tracking-tight" style="color: #9eb5c7;">Pilates Vita</h2>
                         <p class="mt-4 text-slate-700 leading-relaxed">
                             Founded by Patricia A. Robinson in 2006 in the USA, and subsequently in St Maarten in 2014,
                             San Francisco in 2018, and London in 2019, Pilates Vita embodies decades of experience and
@@ -235,7 +243,8 @@
                 <!-- Patricia Robinson Section -->
                 <div class="rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
                     <div class="p-8 md:p-10">
-                        <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Patricia Robinson, Founder and
+                        <h2 class="text-2xl font-semibold tracking-tight" style="color: #9eb5c7;">Patricia Robinson,
+                            Founder and
                             Owner of Pilates Vita</h2>
 
                         <p class="mt-4 text-slate-700 leading-relaxed">
@@ -334,9 +343,8 @@
                     </div>
                 </div>
 
-                <!-- CTA -->
                 <div class="mt-16 rounded-3xl border border-slate-200 bg-slate-50 p-8 text-center">
-                    <h2 class="text-xl font-semibold tracking-tight text-slate-900">
+                    <h2 class="text-xl font-semibold tracking-tight" style="color: #9eb5c7;">
                         Begin Your Pilates Journey
                     </h2>
                     <p class="mt-4 text-slate-600">
@@ -344,12 +352,12 @@
                     </p>
                     <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
                         <a href="./booking.html"
-                            class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800 transition">
-                            Book a Session
+                            class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+                            BOOK A SESSION
                         </a>
                         <a href="./intro-session.html"
-                            class="inline-flex items-center justify-center rounded-full border border-slate-900 text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white transition">
-                            10% Off First Session
+                            class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+                            10% OFF FIRST SESSION
                         </a>
                     </div>
                 </div>

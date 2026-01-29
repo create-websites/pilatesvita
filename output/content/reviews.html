@@ -7,32 +7,49 @@
     <title>Testimonials — Pilates Vita</title>
 
     <!-- Tailwind (CDN for quick static prototype) -->
+    <!-- TypeKit Fonts (futura-pt, hypatia-sans-pro) -->
+    <link rel="stylesheet" href="https://use.typekit.net/iqv7zfj.css">
+
+    <!-- Tailwind (CDN for quick static prototype) -->
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="./styles.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        ink: "#0b1b3a",
-                        ink2: "#0a1630",
+                        ink: "#9eb5c7",
+                        ink2: "#9eb5c7",
+                        "ink-light": "#000942",
+                    },
+                    fontFamily: {
+                        sans: ['Futura', 'Helvetica Neue', 'Arial', 'sans-serif'],
                     },
                     boxShadow: {
-                        soft: "0 12px 40px rgba(15, 23, 42, 0.10)",
+                        soft: "0 12px 40px rgba(8, 19, 89, 0.10)",
                     }
                 }
             }
         }
     </script>
-
     <style>
         html {
             scroll-behavior: smooth;
         }
-    /* Fix dropdown gap issue */
-    .dropdown-menu {
-      padding-top: 0.5rem;
-      margin-top: -0.5rem;
-    }
+
+        .dropdown-menu {
+            padding-top: 0.5rem;
+            margin-top: -0.5rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'hypatia-sans-pro', 'Helvetica Neue', Arial, sans-serif;
+        }
     </style>
 </head>
 
@@ -40,7 +57,7 @@
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
         <div class="mx-auto max-w-6xl px-4">
-            <div class="flex items-center justify-between py-3">
+            <div class="flex items-center justify-between py-5">
                 <!-- Mobile menu button -->
                 <button id="menuBtn"
                     class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
@@ -57,7 +74,7 @@
                 </a>
 
                 <!-- Desktop nav -->
-                <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <nav class="hidden md:flex items-center gap-6 text-base font-medium">
                     <a class="hover:text-ink" href="./index.html">Home</a>
                     <a class="hover:text-ink" href="./booking.html">Booking</a>
                     <a class="hover:text-ink" href="./sessions.html">Session Types</a>
@@ -65,8 +82,7 @@
 
                     <!-- About dropdown -->
                     <div class="relative group">
-                        <a class="hover:text-ink inline-flex items-center gap-1 pb-2"
-                            href="./about.html">
+                        <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="./about.html">
                             About
                             <svg class="h-4 w-4 opacity-60" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd"
@@ -79,19 +95,16 @@
                         absolute left-0 top-full w-48 rounded-2xl bg-white shadow-soft ring-1 ring-slate-200 overflow-hidden">
                             <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./our-instructors-1.html">Our
                                 Instructors</a>
-                            <a class="block px-4 py-3 text-sm hover:bg-slate-50"
-                                href="./studios.html">The
+                            <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./studios.html">The
                                 Studio</a>
-                            <a class="block px-4 py-3 text-sm hover:bg-slate-50"
-                                href="./about.html">Our
+                            <a class="block px-4 py-3 text-sm hover:bg-slate-50" href="./about.html">Our
                                 Story</a>
                         </div>
                     </div>
 
                     <!-- What is Pilates dropdown -->
                     <div class="relative group">
-                        <a class="hover:text-ink inline-flex items-center gap-1 pb-2"
-                            href="https://www.pilatesvita.com/what-is-pilates">
+                        <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="javascript:void(0)">
                             What Is Pilates?
                             <svg class="h-4 w-4 opacity-60" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd"
@@ -130,21 +143,19 @@
 
                     <div class="border-t border-slate-200"></div>
                     <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">About</div>
-                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
-                        href="./about.html">About</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./about.html">About</a>
                     <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./our-instructors-1.html">Our
                         Instructors</a>
-                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
-                        href="./studios.html">The Studio</a>
-                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
-                        href="./about.html">Our
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./studios.html">The
+                        Studio</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./about.html">Our
                         Story</a>
 
                     <div class="border-t border-slate-200"></div>
                     <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">What Is Pilates?
                     </div>
-                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
-                        href="https://www.pilatesvita.com/what-is-pilates">What Is Pilates?</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="javascript:void(0)">What Is
+                        Pilates?</a>
                     <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
                         href="./introduction-to-pilates.html">Introduction to Pilates</a>
                     <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
@@ -163,7 +174,7 @@
         <!-- Hero -->
         <section class="bg-slate-50">
             <div class="mx-auto max-w-4xl px-4 py-16 text-center">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight" style="color: #9eb5c7;">
                     Hear From Our Happy Clients
                 </h1>
                 <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
@@ -198,7 +209,7 @@
 
                 <!-- CTA -->
                 <div class="mt-16 rounded-3xl border border-slate-200 bg-slate-50 p-8 text-center">
-                    <h2 class="text-xl font-semibold tracking-tight text-slate-900">
+                    <h2 class="text-xl font-semibold tracking-tight" style="color: #9eb5c7;">
                         We are proud to create a space where our clients feel valued, supported, and inspired.
                     </h2>
                     <p class="mt-4 text-slate-600">
@@ -206,8 +217,8 @@
                     </p>
                     <div class="mt-6 flex justify-center">
                         <a href="./contact.html"
-                            class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800 transition">
-                            Contact Us Today
+                            class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+                            CONTACT US TODAY
                         </a>
                     </div>
                 </div>

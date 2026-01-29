@@ -5,17 +5,71 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pilates Vita — Home (Tailwind rebuild)</title>
-<meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" /><link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico"/>
-<link rel="canonical" href="https://www.pilatesvita.com"/>
-<meta property="og:site_name" content="Pilates Vita"/>
-<meta property="og:title" content="Pilates Vita"/>
-<meta property="og:url" content="https://www.pilatesvita.com"/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="http://static1.squarespace.com/static/5cbf4c0f7d0c9122a51c8d0f/t/5ccf7e44eb3931597f98dca8/1557102149578/pilates-vita-logo.png?format=1500w"/>
-<meta property="og:image:width" content="600"/>
-<meta property="og:image:height" content="209"/>
-<meta itemprop="name" content="Pilates Vita"/>
-<meta itemprop="url" content="https://www.pilatesvita.com"/>
+  <meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" />
+  <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico" />
+  <link rel="canonical" href="https://www.pilatesvita.com" />
+  <meta property="og:site_name" content="Pilates Vita" />
+  <meta property="og:title" content="Pilates Vita" />
+  <meta property="og:url" content="https://www.pilatesvita.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image"
+    content="http://static1.squarespace.com/static/5cbf4c0f7d0c9122a51c8d0f/t/5ccf7e44eb3931597f98dca8/1557102149578/pilates-vita-logo.png?format=1500w" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="209" />
+  <meta itemprop="name" content="Pilates Vita" />
+  <meta itemprop="url" content="https://www.pilatesvita.com" />
+
+  <!-- Local Futura Fonts -->
+  <style>
+    @font-face {
+      font-family: 'Futura';
+      src: url('./fonts/FuturaCyrillicLight.ttf') format('truetype');
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Futura';
+      src: url('./fonts/FuturaCyrillicBook.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Futura';
+      src: url('./fonts/FuturaCyrillicMedium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Futura';
+      src: url('./fonts/FuturaCyrillicDemi.ttf') format('truetype');
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Futura';
+      src: url('./fonts/FuturaCyrillicBold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Futura';
+      src: url('./fonts/FuturaCyrillicExtraBold.ttf') format('truetype');
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Futura';
+      src: url('./fonts/FuturaCyrillicHeavy.ttf') format('truetype');
+      font-weight: 900;
+      font-style: normal;
+    }
+  </style>
 
   <!-- Tailwind (CDN for quick static prototype) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -24,11 +78,15 @@
       theme: {
         extend: {
           colors: {
-            ink: "#0b1b3a",
-            ink2: "#0a1630",
+            // Pilates Vita colors - user specified
+            ink: "#9eb5c7",        // Blue-gray for navbar, headings
+            ink2: "#9eb5c7",       // Footer background
+          },
+          fontFamily: {
+            sans: ['Futura', 'Helvetica Neue', 'Arial', 'sans-serif'],
           },
           boxShadow: {
-            soft: "0 12px 40px rgba(15, 23, 42, 0.10)",
+            soft: "0 12px 40px rgba(158, 181, 199, 0.15)",
           }
         }
       }
@@ -39,10 +97,65 @@
     html {
       scroll-behavior: smooth;
     }
+
     /* Fix dropdown gap issue */
     .dropdown-menu {
       padding-top: 0.5rem;
       margin-top: -0.5rem;
+    }
+
+    /* All fonts use Jost, body text is dark navy */
+    body {
+      font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+      color: #1a1a2e;
+    }
+
+    /* Headings use #9eb5c7 color */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+      color: #9eb5c7;
+    }
+
+    /* Navbar links color */
+    nav a {
+      color: #9eb5c7;
+    }
+
+    nav a:hover {
+      color: #7a9ab3;
+    }
+
+    /* Buttons styled with #9eb5c7 */
+    .btn-outline {
+      border: 1px solid #9eb5c7;
+      color: #9eb5c7;
+      background: transparent;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .btn-outline:hover {
+      background: #9eb5c7;
+      color: #1a1a2e;
+    }
+
+    /* Links */
+    a {
+      color: #9eb5c7;
+    }
+
+    a:hover {
+      color: #7a9ab3;
+    }
+
+    /* Accordion buttons */
+    .acc-btn span.font-semibold {
+      color: #1a1a2e;
     }
   </style>
 </head>
@@ -51,7 +164,7 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
     <div class="mx-auto max-w-6xl px-4">
-      <div class="flex items-center justify-between py-3">
+      <div class="flex items-center justify-between py-5">
         <!-- Mobile menu button -->
         <button id="menuBtn"
           class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
@@ -67,7 +180,7 @@
         </a>
 
         <!-- Desktop nav -->
-        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav class="hidden md:flex items-center gap-6 text-base font-medium">
           <a class="hover:text-ink" href="./index.html">Home</a>
           <a class="hover:text-ink" href="./booking.html">Booking</a>
           <a class="hover:text-ink" href="./sessions.html">Session Types</a>
@@ -95,7 +208,7 @@
 
           <!-- What is Pilates dropdown -->
           <div class="relative group">
-            <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="https://www.pilatesvita.com/what-is-pilates">
+            <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="javascript:void(0)">
               What Is Pilates?
               <svg class="h-4 w-4 opacity-60" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
@@ -129,19 +242,17 @@
 
           <div class="border-t border-slate-200"></div>
           <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">About</div>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
-            href="./about.html">About</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./about.html">About</a>
           <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./our-instructors-1.html">Our
             Instructors</a>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
-            href="./studios.html">The Studio</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./studios.html">The Studio</a>
           <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="./about.html">Our
             Story</a>
 
           <div class="border-t border-slate-200"></div>
           <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">What Is Pilates?</div>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
-            href="https://www.pilatesvita.com/what-is-pilates">What Is Pilates?</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="javascript:void(0)">What Is
+            Pilates?</a>
           <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
             href="./introduction-to-pilates.html">Introduction to Pilates</a>
           <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
@@ -156,38 +267,35 @@
   </header>
 
   <main>
-    <!-- Index page 1 -->
-    <section id="welcome-message" class="relative min-h-[82vh] flex items-center">
-      <div class="absolute inset-0">
-        <img src="./Pilates Vita -1_files/IMG_2461.jpeg" alt="Pilates Vita studio" class="h-full w-full object-cover" />
-        <div class="absolute inset-0 bg-black/35"></div>
-      </div>
+    <!-- Hero Text Section (White Background) -->
+    <section id="welcome-message" class="bg-white py-16 md:py-24">
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+          Classical &amp; Contemporary real Pilates Tailored to Your Body.
+        </h1>
+        <p class="mt-6 text-lg md:text-xl" style="color: #9eb5c7;">
+          Private Sessions<br class="hidden sm:block" />
+          Master Teachers<br class="hidden sm:block" />
+          Luxurious Studio
+        </p>
 
-      <div class="relative mx-auto max-w-5xl px-4 py-16">
-        <div class="mx-auto max-w-3xl text-center text-white">
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-            Classical &amp; Contemporary real Pilates Tailored to Your Body.
-          </h1>
-          <p class="mt-6 text-lg md:text-xl opacity-95">
-            Private Sessions<br class="hidden sm:block" />
-            Master Teachers<br class="hidden sm:block" />
-            Luxurious Studio
-          </p>
-
-          <div class="mt-8 flex items-center justify-center">
-            <a href="./intro-session.html"
-              class="inline-flex items-center justify-center rounded-full bg-white text-slate-900 px-6 py-3 text-sm font-semibold shadow-soft hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-white/60">
-              10% Off Your First Private Session
-            </a>
-          </div>
-
-          <div class="mt-10 flex items-center justify-center gap-2 text-xs uppercase tracking-widest opacity-80">
-            <span class="inline-block h-px w-10 bg-white/60"></span>
-            <span>Scroll</span>
-            <span class="inline-block h-px w-10 bg-white/60"></span>
-          </div>
+        <div class="mt-8 flex items-center justify-center">
+          <a href="./intro-session.html"
+            class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+            10% OFF YOUR FIRST PRIVATE SESSION
+          </a>
         </div>
+
+        <p class="mt-8 text-sm tracking-wide" style="color: #9eb5c7;">
+          Discover the difference at Pilates Vita.
+        </p>
       </div>
+    </section>
+
+    <!-- Hero Image Section -->
+    <section class="relative">
+      <img src="./Pilates Vita -1_files/IMG_2461.jpeg" alt="Pilates Vita studio"
+        class="w-full h-[50vh] md:h-[60vh] object-cover" />
     </section>
 
     <!-- Index page 2 (image-only section in the original: new-page-1) -->
@@ -205,7 +313,7 @@
     <!-- Index page 3 (Tailored: new-page-2) -->
     <section id="new-page-2" class="bg-white">
       <div class="mx-auto max-w-4xl px-4 py-16">
-        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-slate-900">
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">
           Tailored to Your Goals.
         </h2>
 
@@ -239,8 +347,8 @@
 
         <div class="mt-10 flex justify-center">
           <a href="./intro-session.html"
-            class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
-            try your first session and get 10% off
+            class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+            try your first session and get 10% off →
           </a>
         </div>
       </div>
@@ -250,7 +358,7 @@
     <section id="new-page" class="bg-white">
       <div class="mx-auto max-w-4xl px-4 py-16">
         <div class="border-t border-slate-200 pt-10">
-          <h2 class="text-center text-2xl md:text-3xl font-semibold tracking-tight text-slate-900">
+          <h2 class="text-center text-2xl md:text-3xl font-semibold tracking-tight">
             Find the right Pilates session for you.
           </h2>
 
@@ -308,7 +416,7 @@
 
           <div class="mt-10 flex justify-center">
             <a href="./sessions.html"
-              class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
+              class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
               all Sessions and prices
             </a>
           </div>
@@ -341,7 +449,7 @@
 
           <div class="mt-10 flex justify-center">
             <a href="./reviews.html"
-              class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
+              class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
               read more testimonials
             </a>
           </div>
@@ -353,7 +461,7 @@
     <section id="new-page-4" class="bg-white">
       <div class="mx-auto max-w-4xl px-4 py-16">
         <div class="border-t border-slate-200 pt-10">
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-slate-900">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">
             Discover the difference at Pilates Vita.
           </h2>
 
@@ -384,8 +492,8 @@
 
           <div class="mt-10 flex justify-center">
             <a href="./about.html"
-              class="inline-flex items-center justify-center rounded-full border border-slate-900 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
-              learn more about Pilates Vita
+              class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+              learn more about Pilates Vita →
             </a>
           </div>
         </div>

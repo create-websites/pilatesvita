@@ -13,19 +13,39 @@
   
 
   <!-- Theme (aligned with other rebuilt pages) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- TypeKit Fonts (futura-pt, hypatia-sans-pro) -->
+  <link rel="stylesheet" href="https://use.typekit.net/iqv7zfj.css">
 
-  <style>
-    body { font-family: 'Lato', sans-serif; color:#111827; background:#fcfcfc; }
-    h1,h2,h3,h4,.serif { font-family: 'Playfair Display', serif; }
-    .hero-overlay { background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.78)); }
-    .smooth-scroll { scroll-behavior: smooth; }
-    .card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.10), 0 10px 10px -5px rgba(0,0,0,0.04);
+  <!-- Tailwind (CDN for quick static prototype) -->
+  
+  <!-- Shared Styles -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#9eb5c7",
+            ink2: "#9eb5c7",
+            "ink-light": "#000942",
+          },
+          fontFamily: {
+            sans: ['Futura', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            
+          },
+          boxShadow: {
+            soft: "0 12px 40px rgba(8, 19, 89, 0.10)",
+          }
+        }
+      }
     }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .dropdown-menu { padding-top: 0.5rem; margin-top: -0.5rem; }
+    h1, h2, h3 { font-family: 'hypatia-sans-pro', 'Helvetica Neue', Arial, sans-serif; }
   </style>
 </head>
 

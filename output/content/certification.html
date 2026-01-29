@@ -1,55 +1,56 @@
 <!doctype html>
-<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US"  >
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
-<title>Certification &mdash; Pilates Vita</title>
-<meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" /><link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico"/>
-<link rel="canonical" href="https://www.pilatesvita.com/certification"/>
-<meta property="og:site_name" content="Pilates Vita"/>
-<meta property="og:title" content="Certification &mdash; Pilates Vita"/>
-<meta property="og:url" content="https://www.pilatesvita.com/certification"/>
-<meta property="og:type" content="website"/>
-<meta itemprop="name" content="Certification — Pilates Vita"/>
-<meta itemprop="url" content="https://www.pilatesvita.com/certification"/>
-<meta name="twitter:title" content="Certification — Pilates Vita"/>
-<meta name="twitter:url" content="https://www.pilatesvita.com/certification"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="description" content="" />
-<link rel="preconnect" href="https://images.squarespace-cdn.com">
-<link rel="preconnect" href="https://use.typekit.net" crossorigin>
-<link rel="preconnect" href="https://p.typekit.net" crossorigin>
-  
+  <title>Certification &mdash; Pilates Vita</title>
+  <meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" />
+  <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico" />
+  <link rel="canonical" href="https://www.pilatesvita.com/certification" />
+  <meta property="og:site_name" content="Pilates Vita" />
+  <meta property="og:title" content="Certification &mdash; Pilates Vita" />
+  <meta property="og:url" content="https://www.pilatesvita.com/certification" />
+  <meta property="og:type" content="website" />
+  <meta itemprop="name" content="Certification — Pilates Vita" />
+  <meta itemprop="url" content="https://www.pilatesvita.com/certification" />
+  <meta name="twitter:title" content="Certification — Pilates Vita" />
+  <meta name="twitter:url" content="https://www.pilatesvita.com/certification" />
+  <meta name="twitter:card" content="summary" />
   <meta name="description"
     content="Instructor Certification interest form for Pilates Vita. Submit your details and we will reach out with program information." />
+  <link rel="preconnect" href="https://images.squarespace-cdn.com">
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="preconnect" href="https://p.typekit.net" crossorigin>
 
-  <!-- Tailwind (CDN for quick static prototype) -->
+  <!-- Shared Styles -->
+  <link rel="stylesheet" href="./styles.css">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            ink: "#0b1b3a",
-            ink2: "#0a1630",
+            ink: "#9eb5c7",
+            ink2: "#9eb5c7",
+          },
+          fontFamily: {
+            sans: ['Futura', 'Helvetica Neue', 'Arial', 'sans-serif'],
           },
           boxShadow: {
-            soft: "0 12px 40px rgba(15, 23, 42, 0.10)",
+            soft: "0 12px 40px rgba(158, 181, 199, 0.15)",
           }
         }
       }
     }
   </script>
-
   <style>
     html {
       scroll-behavior: smooth;
     }
 
-    /* Fix dropdown gap issue */
     .dropdown-menu {
       padding-top: 0.5rem;
       margin-top: -0.5rem;
@@ -61,7 +62,7 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
     <div class="mx-auto max-w-6xl px-4">
-      <div class="flex items-center justify-between py-3">
+      <div class="flex items-center justify-between py-5">
         <!-- Mobile menu button -->
         <button id="menuBtn"
           class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
@@ -77,7 +78,7 @@
         </a>
 
         <!-- Desktop nav -->
-        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav class="hidden md:flex items-center gap-6 text-base font-medium">
           <a class="hover:text-ink" href="./index.html">Home</a>
           <a class="hover:text-ink" href="./booking.html">Booking</a>
           <a class="hover:text-ink" href="./sessions.html">Session Types</a>
@@ -104,7 +105,7 @@
 
           <!-- What is Pilates dropdown -->
           <div class="relative group">
-            <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="./introduction-to-pilates.html">
+            <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="javascript:void(0)">
               What Is Pilates?
               <svg class="h-4 w-4 opacity-60" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
@@ -147,8 +148,8 @@
 
           <div class="border-t border-slate-200"></div>
           <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">What Is Pilates?</div>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
-            href="./introduction-to-pilates.html">Introduction to Pilates</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="javascript:void(0)">What Is
+            Pilates?</a>
           <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
             href="./seven-principles-of-pilates.html">Seven Principles of Pilates</a>
 
@@ -165,7 +166,7 @@
     <!-- Hero -->
     <section class="bg-slate-50">
       <div class="mx-auto max-w-4xl px-4 py-16 text-center">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight" style="color: #9eb5c7;">
           Instructor Certification
         </h1>
         <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
@@ -183,7 +184,8 @@
           <!-- Form -->
           <div class="lg:col-span-2">
             <div class="rounded-3xl border border-slate-200 shadow-soft p-8 md:p-10">
-              <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Request Certification Details</h2>
+              <h2 class="text-2xl font-semibold tracking-tight" style="color: #9eb5c7;">Request Certification Details
+              </h2>
               <p class="mt-2 text-slate-600">Share a few details and we will respond as soon as possible with next
                 steps, schedules, and program information.</p>
 
@@ -222,12 +224,12 @@
 
                 <div class="flex flex-col sm:flex-row gap-3">
                   <button type="submit"
-                    class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800 transition">
-                    Send Message
+                    class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+                    SEND MESSAGE
                   </button>
                   <a href="mailto:patricia.patricia@mac.com?subject=Certification%20Interest%20%E2%80%94%20Pilates%20Vita"
-                    class="inline-flex items-center justify-center rounded-full border border-slate-900 text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white transition">
-                    Email Directly
+                    class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+                    EMAIL DIRECTLY
                   </a>
                 </div>
 
@@ -244,7 +246,7 @@
 
             <!-- What happens next -->
             <div class="rounded-3xl border border-slate-200 shadow-soft p-8">
-              <h3 class="text-lg font-semibold tracking-tight text-slate-900">What happens next</h3>
+              <h3 class="text-lg font-semibold tracking-tight" style="color: #9eb5c7;">What happens next</h3>
               <p class="mt-3 text-slate-700">
                 We will review your details and respond with the certification pathway, requirements, and available
                 dates.
@@ -253,10 +255,11 @@
 
             <!-- What to include -->
             <div class="rounded-3xl border border-slate-200 shadow-soft p-8">
-              <h3 class="text-lg font-semibold tracking-tight text-slate-900">What to include</h3>
+              <h3 class="text-lg font-semibold tracking-tight" style="color: #9eb5c7;">What to include</h3>
               <ul class="mt-4 space-y-3">
                 <li class="flex items-start gap-3">
-                  <svg class="h-5 w-5 text-slate-900 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <svg class="h-5 w-5 mt-0.5 flex-shrink-0" style="color: #9eb5c7;" viewBox="0 0 20 20"
+                    fill="currentColor">
                     <path fill-rule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                       clip-rule="evenodd" />
@@ -265,7 +268,8 @@
                     teaching)</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="h-5 w-5 text-slate-900 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <svg class="h-5 w-5 mt-0.5 flex-shrink-0" style="color: #9eb5c7;" viewBox="0 0 20 20"
+                    fill="currentColor">
                     <path fill-rule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                       clip-rule="evenodd" />
@@ -273,7 +277,8 @@
                   <span class="text-slate-700 text-sm">Your goals (teaching, deepening practice, rehab)</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="h-5 w-5 text-slate-900 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <svg class="h-5 w-5 mt-0.5 flex-shrink-0" style="color: #9eb5c7;" viewBox="0 0 20 20"
+                    fill="currentColor">
                     <path fill-rule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                       clip-rule="evenodd" />
@@ -284,17 +289,15 @@
             </div>
 
             <!-- Contact directly -->
-            <div class="rounded-3xl border border-slate-200 bg-slate-900 text-white p-8">
+            <div class="rounded-3xl border border-slate-200 bg-ink text-white p-8">
               <h3 class="text-lg font-semibold">Prefer to reach out directly?</h3>
               <p class="mt-3 text-white/80 text-sm">
                 Contact us by phone or WhatsApp, and we will guide you to the right next steps.
               </p>
               <div class="mt-6 space-y-3 text-sm">
-                <a href="tel:+447833123833" class="block hover:text-white/80">📞 +44 (0)7 833 123 833</a>
-                <a href="https://wa.me/447833123833" target="_blank" rel="noreferrer"
-                  class="block hover:text-white/80">💬 WhatsApp: 07833 123833</a>
-                <a href="mailto:patricia.patricia@mac.com" class="block hover:text-white/80">✉️
-                  patricia.patricia@mac.com</a>
+                <p class="block">📞 +44 (0)7 833 123 833</p>
+                <p class="block">💬 WhatsApp: 07833 123833</p>
+                <p class="block">✉️ patricia.patricia@mac.com</p>
               </div>
             </div>
           </div>
@@ -371,37 +374,12 @@
     </div>
   </footer>
 
-  <!-- JS -->
+  <!-- JS: mobile menu + year -->
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Form handling
-    const form = document.getElementById('certForm');
-    const err = document.getElementById('formError');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      err.classList.add('hidden');
-
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const message = document.getElementById('message').value.trim();
-
-      if (!name || !email) {
-        err.textContent = 'Please provide your name and email address.';
-        err.classList.remove('hidden');
-        return;
-      }
-
-      const subject = encodeURIComponent(`Certification Interest — Pilates Vita (${name})`);
-      const body = encodeURIComponent(`Certification Interest Form\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone || '(not provided)'}\n\nMessage:\n${message || '(none)'}\n\n— Sent from Pilates Vita website`);
-
-      window.location.href = `mailto:patricia.patricia@mac.com?subject=${subject}&body=${body}`;
-    });
   </script>
 </body>
 

@@ -1,54 +1,66 @@
 <!doctype html>
-<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US"  >
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Contact &mdash; Pilates Vita</title>
-<meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" /><link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico"/>
-<link rel="canonical" href="https://www.pilatesvita.com/contact"/>
-<meta property="og:site_name" content="Pilates Vita"/>
-<meta property="og:title" content="Contact &mdash; Pilates Vita"/>
-<meta property="og:url" content="https://www.pilatesvita.com/contact"/>
-<meta property="og:type" content="website"/>
-<meta itemprop="name" content="Contact — Pilates Vita"/>
-<meta itemprop="url" content="https://www.pilatesvita.com/contact"/>
-<meta name="twitter:title" content="Contact — Pilates Vita"/>
-<meta name="twitter:url" content="https://www.pilatesvita.com/contact"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="description" content="" />
+  <meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" />
+  <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico" />
+  <link rel="canonical" href="https://www.pilatesvita.com/contact" />
+  <meta property="og:site_name" content="Pilates Vita" />
+  <meta property="og:title" content="Contact &mdash; Pilates Vita" />
+  <meta property="og:url" content="https://www.pilatesvita.com/contact" />
+  <meta property="og:type" content="website" />
+  <meta itemprop="name" content="Contact — Pilates Vita" />
+  <meta itemprop="url" content="https://www.pilatesvita.com/contact" />
+  <meta name="twitter:title" content="Contact — Pilates Vita" />
+  <meta name="twitter:url" content="https://www.pilatesvita.com/contact" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="description" content="" />
 
-<link rel="preconnect" href="https://use.typekit.net" crossorigin>
-<link rel="preconnect" href="https://p.typekit.net" crossorigin>
-  
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="preconnect" href="https://p.typekit.net" crossorigin>
+
   <meta name="description"
     content="Contact Pilates Vita in South Kensington, London. Phone, WhatsApp, address, opening hours, and a contact form." />
 
   <!-- Tailwind (CDN for quick static prototype) -->
+  <!-- TypeKit Fonts (futura-pt, hypatia-sans-pro) -->
+  <link rel="stylesheet" href="https://use.typekit.net/iqv7zfj.css">
+
+  <!-- Tailwind (CDN for quick static prototype) -->
+
+  <!-- Shared Styles -->
+  <link rel="stylesheet" href="./styles.css">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            ink: "#0b1b3a",
-            ink2: "#0a1630",
+            ink: "#9eb5c7",
+            ink2: "#9eb5c7",
+            "ink-light": "#000942",
+          },
+          fontFamily: {
+            sans: ['Futura', 'Helvetica Neue', 'Arial', 'sans-serif'],
+
           },
           boxShadow: {
-            soft: "0 12px 40px rgba(15, 23, 42, 0.10)",
+            soft: "0 12px 40px rgba(8, 19, 89, 0.10)",
           }
         }
       }
     }
   </script>
-
   <style>
     html {
       scroll-behavior: smooth;
     }
 
-    /* Fix dropdown gap issue */
     .dropdown-menu {
       padding-top: 0.5rem;
       margin-top: -0.5rem;
@@ -60,7 +72,7 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
     <div class="mx-auto max-w-6xl px-4">
-      <div class="flex items-center justify-between py-3">
+      <div class="flex items-center justify-between py-5">
         <!-- Mobile menu button -->
         <button id="menuBtn"
           class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
@@ -76,7 +88,7 @@
         </a>
 
         <!-- Desktop nav -->
-        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav class="hidden md:flex items-center gap-6 text-base font-medium">
           <a class="hover:text-ink" href="./index.html">Home</a>
           <a class="hover:text-ink" href="./booking.html">Booking</a>
           <a class="hover:text-ink" href="./sessions.html">Session Types</a>
@@ -103,7 +115,7 @@
 
           <!-- What is Pilates dropdown -->
           <div class="relative group">
-            <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="./introduction-to-pilates.html">
+            <a class="hover:text-ink inline-flex items-center gap-1 pb-2" href="javascript:void(0)">
               What Is Pilates?
               <svg class="h-4 w-4 opacity-60" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
@@ -146,8 +158,8 @@
 
           <div class="border-t border-slate-200"></div>
           <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">What Is Pilates?</div>
-          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
-            href="./introduction-to-pilates.html">Introduction to Pilates</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50" href="javascript:void(0)">What Is
+            Pilates?</a>
           <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50"
             href="./seven-principles-of-pilates.html">Seven Principles of Pilates</a>
 
@@ -164,23 +176,14 @@
     <!-- Hero -->
     <section class="bg-slate-50">
       <div class="mx-auto max-w-4xl px-4 py-16 text-center">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-ink">
           Contact Us
         </h1>
         <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
           We're here to answer any questions and help you on your Pilates journey. Whether you're looking to book a
           session, learn more about our programmes, or simply want to chat, we'd love to hear from you.
         </p>
-        <div class="mt-8 flex flex-wrap justify-center gap-4">
-          <a href="tel:+447833123833"
-            class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800 transition">
-            📞 Call Us
-          </a>
-          <a href="https://wa.me/447833123833" target="_blank" rel="noreferrer"
-            class="inline-flex items-center justify-center rounded-full border border-slate-900 text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white transition">
-            💬 WhatsApp
-          </a>
-        </div>
+
       </div>
     </section>
 
@@ -191,7 +194,7 @@
 
           <!-- Phone -->
           <div class="rounded-3xl border border-slate-200 shadow-soft p-8 text-center">
-            <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mx-auto mb-6">
+            <div class="h-14 w-14 rounded-2xl bg-ink text-white flex items-center justify-center mx-auto mb-6">
               <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path
@@ -199,7 +202,7 @@
                 </path>
               </svg>
             </div>
-            <h3 class="text-lg font-semibold tracking-tight text-slate-900">Phone</h3>
+            <h3 class="text-lg font-semibold tracking-tight text-ink">Phone</h3>
             <p class="mt-3 text-slate-700">
               <a href="tel:+447833123833" class="hover:underline">+44 (0) 7 833 123 833</a>
             </p>
@@ -207,7 +210,7 @@
 
           <!-- WhatsApp -->
           <div class="rounded-3xl border border-slate-200 shadow-soft p-8 text-center">
-            <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mx-auto mb-6">
+            <div class="h-14 w-14 rounded-2xl bg-ink text-white flex items-center justify-center mx-auto mb-6">
               <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path
@@ -215,7 +218,7 @@
                 </path>
               </svg>
             </div>
-            <h3 class="text-lg font-semibold tracking-tight text-slate-900">WhatsApp</h3>
+            <h3 class="text-lg font-semibold tracking-tight text-ink">WhatsApp</h3>
             <p class="mt-3 text-slate-700">
               <a href="https://wa.me/447833123833" target="_blank" rel="noreferrer" class="hover:underline">+44 (0) 7
                 833 123 833</a>
@@ -224,14 +227,14 @@
 
           <!-- Address -->
           <div class="rounded-3xl border border-slate-200 shadow-soft p-8 text-center">
-            <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mx-auto mb-6">
+            <div class="h-14 w-14 rounded-2xl bg-ink text-white flex items-center justify-center mx-auto mb-6">
               <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
             </div>
-            <h3 class="text-lg font-semibold tracking-tight text-slate-900">Address</h3>
+            <h3 class="text-lg font-semibold tracking-tight text-ink">Address</h3>
             <p class="mt-3 text-slate-700">
               109 Gloucester Rd.<br />
               South Kensington, SW7 4SS<br />
@@ -241,14 +244,14 @@
 
           <!-- Opening Hours -->
           <div class="rounded-3xl border border-slate-200 shadow-soft p-8 text-center">
-            <div class="h-14 w-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mx-auto mb-6">
+            <div class="h-14 w-14 rounded-2xl bg-ink text-white flex items-center justify-center mx-auto mb-6">
               <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
             </div>
-            <h3 class="text-lg font-semibold tracking-tight text-slate-900">Opening Hours</h3>
+            <h3 class="text-lg font-semibold tracking-tight text-ink">Opening Hours</h3>
             <p class="mt-3 text-slate-700">
               Monday to Saturday:<br />
               7:00am - 8:00pm<br />
@@ -266,7 +269,7 @@
 
           <!-- Form -->
           <div class="rounded-3xl border border-slate-200 shadow-soft p-8 md:p-10 bg-white">
-            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Send us a message</h2>
+            <h2 class="text-2xl font-semibold tracking-tight text-ink">Send us a message</h2>
             <p class="mt-2 text-slate-600">Got questions? Fill out the form and we'll get back to you.</p>
 
             <form id="contactForm" class="mt-8 space-y-6" novalidate>
@@ -304,11 +307,11 @@
 
               <div class="flex flex-col sm:flex-row gap-3">
                 <button type="submit"
-                  class="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-semibold hover:bg-slate-800 transition">
+                  class="inline-flex items-center justify-center btn-outline rounded-full px-6 py-3 text-sm font-semibold hover:bg-ink transition">
                   Send Message
                 </button>
                 <a href="mailto:patricia.patricia@mac.com"
-                  class="inline-flex items-center justify-center rounded-full border border-slate-900 text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-900 hover:text-white transition">
+                  class="inline-flex items-center justify-center rounded-full border border-ink text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-ink hover:text-white transition">
                   Email Directly
                 </a>
               </div>
