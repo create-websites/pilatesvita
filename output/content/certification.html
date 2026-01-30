@@ -374,12 +374,71 @@
     </div>
   </footer>
 
-  <!-- JS: mobile menu + year -->
+  <!-- JS: mobile menu + year + form handler -->
   <script>
+    // Mobile menu + year
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // SEND MESSAGE opens email client with prefilled content
+    (function () {
+      const form = document.getElementById('certForm');
+      if (!form) return;
+
+      const toEmail = 'patricia.patricia@mac.com';
+      const subject = 'Certification Interest — Pilates Vita';
+      const formError = document.getElementById('formError');
+
+      function showError(msg) {
+        if (!formError) return;
+        formError.textContent = msg;
+        formError.classList.remove('hidden');
+      }
+
+      function clearError() {
+        if (!formError) return;
+        formError.textContent = '';
+        formError.classList.add('hidden');
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        clearError();
+
+        const name = (document.getElementById('name')?.value || '').trim();
+        const email = (document.getElementById('email')?.value || '').trim();
+        const phone = (document.getElementById('phone')?.value || '').trim();
+        const message = (document.getElementById('message')?.value || '').trim();
+
+        // Basic validation
+        if (!name) return showError('Please enter your name.');
+        if (!email) return showError('Please enter your email.');
+
+        // Build email body
+        const bodyLines = [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Phone: ${phone || '-'}`,
+          '',
+          'Message:',
+          message || '-',
+          '',
+          '— Sent from Pilates Vita website'
+        ];
+        const body = bodyLines.join('\n');
+
+        // mailto URL (must be URL-encoded)
+        const mailto =
+          `mailto:${encodeURIComponent(toEmail)}` +
+          `?subject=${encodeURIComponent(subject)}` +
+          `&body=${encodeURIComponent(body)}`;
+
+        // Open the user's email client
+        window.location.href = mailto;
+      });
+    })();
   </script>
 </body>
 
