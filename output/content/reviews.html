@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Testimonials — Pilates Vita</title>
+
+    <!-- Tailwind (CDN for quick static prototype) -->
+    <!-- TypeKit Fonts (futura-pt, hypatia-sans-pro) -->
+    <link rel="stylesheet" href="https://use.typekit.net/iqv7zfj.css">
+
+    <!-- Tailwind (CDN for quick static prototype) -->
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: "#9eb5c7",
+                        ink2: "#9eb5c7",
+                        "ink-light": "#000942",
+                    },
+                    fontFamily: {
+                        sans: ['Futura', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        soft: "0 12px 40px rgba(8, 19, 89, 0.10)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .dropdown-menu {
+            padding-top: 0.5rem;
+            margin-top: -0.5rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'hypatia-sans-pro', 'Helvetica Neue', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-900 font-sans">
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-100">
+        <div class="mx-auto max-w-6xl px-4">
+            <!-- Logo centered on top -->
+            <div class="flex justify-center py-8">
+                <a href="./index.html">
+                    <img src="./Pilates Vita -1_files/pilates-vita-logo.png" alt="Pilates Vita" class="h-16 w-auto" />
+                </a>
+            </div>
+
+            <!-- Desktop nav - centered below logo -->
+            <nav
+                class="hidden md:flex items-center justify-center gap-8 pb-6 text-xs font-medium tracking-widest uppercase">
+                <a class="nav-link" href="./index.html">Home</a>
+                <a class="nav-link" href="./booking.html">Booking</a>
+                <a class="nav-link" href="./sessions.html">Session Types</a>
+                <a class="nav-link" href="./reviews.html">Testimonials</a>
+
+                <!-- About dropdown -->
+                <div class="relative group">
+                    <a class="nav-link cursor-pointer" href="./about.html">About</a>
+                    <div
+                        class="nav-dropdown invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full mt-2 w-56 bg-ink text-white overflow-hidden z-50">
+                        <a class="block px-5 py-3 text-xs font-medium tracking-widest uppercase hover:bg-white/10 text-center"
+                            href="./our-instructors-1.html">Our Instructors</a>
+                        <a class="block px-5 py-3 text-xs font-medium tracking-widest uppercase hover:bg-white/10 text-center"
+                            href="./studios.html">The Studio</a>
+                        <a class="block px-5 py-3 text-xs font-medium tracking-widest uppercase hover:bg-white/10 text-center"
+                            href="./about.html">Our Story</a>
+                    </div>
+                </div>
+
+                <!-- What is Pilates dropdown -->
+                <div class="relative group">
+                    <a class="nav-link cursor-pointer" href="javascript:void(0)">What Is Pilates?</a>
+                    <div
+                        class="nav-dropdown invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full mt-2 w-64 bg-ink text-white overflow-hidden z-50">
+                        <a class="block px-5 py-3 text-xs font-medium tracking-widest uppercase hover:bg-white/10 text-center"
+                            href="./introduction-to-pilates.html">Introduction to Pilates</a>
+                        <a class="block px-5 py-3 text-xs font-medium tracking-widest uppercase hover:bg-white/10 text-center"
+                            href="./seven-principles-of-pilates.html">Seven Principles of Pilates</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="./certification.html">Certification</a>
+                <a class="nav-link" href="./contact.html">Contact</a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex justify-center pb-4">
+                <button id="menuBtn"
+                    class="inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
+                    aria-label="Open menu">
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="md:hidden hidden pb-4">
+                <div class="rounded-2xl border border-slate-200 bg-white shadow-soft overflow-hidden">
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./index.html">Home</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./booking.html">Booking</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./sessions.html">Session Types</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./reviews.html">Testimonials</a>
+
+                    <div class="border-t border-slate-200"></div>
+                    <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">About</div>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./about.html">About</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./our-instructors-1.html">Our Instructors</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./studios.html">The Studio</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./about.html">Our Story</a>
+
+                    <div class="border-t border-slate-200"></div>
+                    <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">What Is Pilates?
+                    </div>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./introduction-to-pilates.html">Introduction to Pilates</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./seven-principles-of-pilates.html">Seven Principles of Pilates</a>
+
+                    <div class="border-t border-slate-200"></div>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./certification.html">Certification</a>
+                    <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+                        href="./contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="bg-slate-50">
+            <div class="mx-auto max-w-4xl px-4 py-16 text-center">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight" style="color: #9eb5c7;">
+                    Hear From Our Happy Clients
+                </h1>
+                <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
+                    At Pilates Vita, our clients' satisfaction and well-being are our top priorities. Here's what they
+                    have to say about their experiences with us.
+                </p>
+            </div>
+        </section>
+
+        <!-- Text Testimonials Section -->
+        <section class="bg-white">
+            <div class="mx-auto max-w-4xl px-4 py-16">
+                <div class="space-y-16">
+
+                    <!-- Testimonial: Libby H -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "Suelen and Patricia personalise each workout so I improve in the way that's best for my
+                            body and my goals. The studio environment feels like home. I'm so thankful for Pilates Vita
+                            for making me feel confident, strong, and healthy!"
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Libby H</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Daria S -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "Patricia at Pilates Vita is absolutely amazing! She will know and understand your body from
+                            head to toe. I was working out with her throughout all of my pregnancy and it made me feel
+                            so strong and healthy! Every lesson is such a pleasure!"
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Daria S</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Eze A -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "One aspect that truly stood out during my sessions with Patricia was her meticulous
+                            attention to detail. From the very beginning, she took the time to understand my specific
+                            needs, goals, and any physical limitations I had. This personalized approach allowed her to
+                            tailor each session to meet my individual requirements and optimize the benefits of
+                            Pilates."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Eze A</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Natali DS -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "With Suelen's guidance, I have noticed a significant improvement in my flexibility and
+                            strength. Her classes became the highlight of my week, a time to challenge my body and also
+                            to find mental clarity and relaxation. The positive, welcoming atmosphere she created made
+                            me look forward to every session."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Natali DS</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Gary C -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "I had a very agitated piriformis which was trapping the nerves and causing tingling in both
+                            my feet and fingers. After 3 sessions, I am a new man and now a full time Pilates convert.
+                            Patricia truly knows her stuff and incorporates physiotherapy with Pilates… a rare feat.
+                            Many thanks."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Gary C</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Neil P -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "Simply the best Pilates instructor that you could find. Patricia is a consummate
+                            professional able to adapt to the differing needs of individuals and what their body
+                            responds to at the time. Never bored and always challenged she continues to help me and my
+                            wife develop strong and flexible bodies."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Neil P</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Sophie C -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "I have been working with Patricia for around 15 sessions and cannot believe how my body has
+                            changed. I am slimmer and so much stronger. At 55 it takes a lot more work to feel fit, but
+                            with Patricia's guidance it feels almost instant. She is a joy to learn from and a hugely
+                            experienced and knowledgeable teacher."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Sophie C</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Georgina L -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "I have tried other classes and instructors previously and Patricia's techniques, knowledge
+                            and equipment are second to none. My weekly one to ones have made a huge difference to my
+                            health and pain levels and my partner has started joining me, he too has found her advice
+                            and methods invaluable."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Georgina L</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Nicola L -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "I am so happy my eyes have been opened to how a person should learn Pilates. I have been to
+                            many well-known Pilates classes in central London and they definitely do not teach the
+                            proper way of doing Pilates. Patrícia is so warm and friendly and really loves what she
+                            does. I love how she tailor makes each one of sessions, to what she believes my body needs."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Nicola L</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Beatrice G -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "Patricia is really an amazing Pilates teacher and her studio is lovely! She is truly
+                            knowledgeable and caring for her clients. Her physiotherapy skills have come in handy in
+                            helping me with my back. I can't recommend her enough – she really is the best in London!"
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Beatrice G</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Ken B -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "Patricia listens, and investigates deeply into her clients specific and unique cases. She
+                            is a qualified physiotherapist as well as a Pilates teacher, and her sessions are completely
+                            customised to fit her clients needs. She also coaches me on what I need to do in my own time
+                            to help further heal my shoulders."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Ken B</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Tina L -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "Patricia is simply the best pilates expert there is! Plus she is a lovely caring person.
+                            She understands your body very quickly and remembers all the details each time, which is
+                            amazing! Her equipment is extensive, high-end and the most expensive professional kit you
+                            can buy."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Tina L</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Caspar H -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "Patricia is a true professional with an incredible attention to detail. It is immediately
+                            obvious that she is extremely passionate about Pilates and highly knowledgeable. I came to
+                            see Patricia while suffering from extreme back pain and her methods and approach not only
+                            alleviated my pain but also turned me into a Pilates aficionado."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Caspar H</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Celia M -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "After only 5 sessions I can see a huge difference of strength and flexibility. Patricia is
+                            fantastic at explaining how to properly do various Pilates exercises, and is also great
+                            company! Pilates Vita is a truly proper Pilates studio, with great teachers and a lovely
+                            environment."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Celia M</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Alison W -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "I'm completely hooked. Patricia is a Pilates master, and like all excellent teachers she
+                            makes it all look effortless. I've spent years in yoga classes, but 3 private sessions on
+                            the Reformer with Patricia and the shift in my posture has been instant."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Alison W</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Robin -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "I have attended five private pre-natal pilates classes so far and they are the highlight of
+                            my week. Patricia is so knowledgeable on what is happening to my body during pregnancy and
+                            ensures all the exercises are safe for me and my baby."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Robin</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Ekat V -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "I can't even count how many Pilates teachers/trainers I have tried, and no one comes even
+                            close to Patricia. She is amazing, very caring of each client, with individualised,
+                            customised workouts. The pain in my back and shoulders is gone!"
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Ekat V</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Alyssa B -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "Patricia's exercises are completely tailored and no matter where I have pain that
+                            particular day, be it in my shoulders, neck, tendon or back, she is able to fix it within 1
+                            session."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Alyssa B</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Lavinia R -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "The space is beautiful and filled with light, it is also kept super clean. The machines are
+                            the best quality and then there is Patricia… an amazing professional and the heart of this
+                            place."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Lavinia R</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Natali K -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "My favourite place in London for Pilates. Patricia is the best teacher, her warmth and
+                            energy is so motivating. The studio is so light and clean. She completely changed my body
+                            after only a few sessions!"
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Natali K</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Meire F -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "Have you ever encountered someone who's just so good at what they do, that they become an
+                            inspiration to you? Patricia inspires me not just to do Pilates but just to do a good job in
+                            all my endeavors."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Meire F</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Fleur S -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "Patricia is a Master Pilates teacher, her depth of knowledge of the body, Pilates system
+                            and philosophy of practice is incredible. Patricia teaches with wisdom, grace and humour."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Fleur S</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: Rhonda M -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "Patricia is the best pilates teacher I've worked with in my 20 plus years of doing pilates.
+                            Every class is fun and she always introduces new exercises and keeps the classes
+                            interesting."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— Rhonda M</p>
+                    </div>
+
+                    <hr class="border-slate-200" />
+
+                    <!-- Testimonial: David B -->
+                    <div class="text-center">
+                        <p class="text-xl md:text-2xl font-medium text-slate-700 italic leading-relaxed">
+                            "My wife and I have been clients for many months. Patricia and Pilates Vita have literally
+                            changed our lives! I am in my 60s and feel fitter and have more energy, more flexibility,
+                            and more strength than in decades."
+                        </p>
+                        <p class="mt-6 text-sm font-bold tracking-widest text-slate-500 uppercase">— David B</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="bg-white">
+            <div class="mx-auto max-w-6xl px-4 py-16">
+                <div class="mt-16 rounded-3xl border border-slate-200 bg-slate-50 p-8 text-center">
+                    <h2 class="text-xl font-semibold tracking-tight" style="color: #9eb5c7;">
+                        We are proud to create a space where our clients feel valued, supported, and inspired.
+                    </h2>
+                    <p class="mt-4 text-slate-600">
+                        Contact us today and see how Pilates Vita can transform your Pilates experience.
+                    </p>
+                    <div class="mt-6 flex justify-center">
+                        <a href="./contact.html"
+                            class="btn-outline inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition">
+                            CONTACT US TODAY
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ink2 text-white">
+        <div class="mx-auto max-w-6xl px-4 py-16">
+            <div class="grid gap-10 md:grid-cols-3 items-start">
+                <div class="md:col-span-1"></div>
+
+                <div class="md:col-span-1 text-center">
+                    <img src="./Pilates Vita -1_files/pilates-vita-logo-200-white.png" alt="Pilates Vita"
+                        class="mx-auto h-10 w-auto" />
+                    <p class="mt-6 text-sm leading-relaxed text-white/90">
+                        109 Gloucester Rd.<br />
+                        South Kensington, SW7 4SS<br />
+                        London, United Kingdom
+                    </p>
+                    <p class="mt-4 text-sm leading-relaxed text-white/90">
+                        Phone: <a class="underline hover:no-underline" href="tel:07833123833">07833 123833</a><br />
+                        WhatsApp: <a class="underline hover:no-underline" href="https://wa.me/447833123833"
+                            target="_blank" rel="noreferrer">07833 123833</a><br />
+                        Email: <a class="underline hover:no-underline" href="mailto:patricia.patricia@mac.com"
+                            target="_blank" rel="noreferrer">patricia.patricia@mac.com</a><br /><br />
+                        <a class="underline hover:no-underline" href="./policies.html">Booking &amp;
+                            Cancellation Policy</a>
+                    </p>
+
+                    <div class="mt-8 flex items-center justify-center gap-4">
+                        <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
+                            href="https://www.facebook.com/Pilates-Vita-London-UK-2692498114156033/" target="_blank"
+                            rel="noreferrer" aria-label="Facebook">
+                            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M13.5 22v-8h2.7l.4-3H13.5V9.1c0-.9.2-1.5 1.5-1.5h1.6V5c-.3 0-1.4-.1-2.7-.1-2.6 0-4.4 1.6-4.4 4.6V11H7v3h2.5v8h4z" />
+                            </svg>
+                        </a>
+                        <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
+                            href="https://www.instagram.com//pilatesvitakensington" target="_blank" rel="noreferrer"
+                            aria-label="Instagram">
+                            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z" />
+                                <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+                                <path d="M17.5 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </a>
+                        <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
+                            href="mailto:patricia.patricia@mac.com" aria-label="Email">
+                            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm0 2-8 5L4 8h16z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="mt-10 flex items-center justify-center gap-6">
+                        <img src="./Pilates Vita -1_files/pilates-method-alliance-certified.gif" alt="PMA certified"
+                            class="h-10 w-auto rounded bg-white/90 p-1" />
+                        <img src="./Pilates Vita -1_files/selo.png" alt="Award badge"
+                            class="h-10 w-auto rounded bg-white/90 p-1" />
+                        <img src="./Pilates Vita -1_files/review-us-google.jpg" alt="Review us on Google"
+                            class="h-10 w-auto rounded bg-white/90 p-1" />
+                    </div>
+                </div>
+
+                <div class="md:col-span-1"></div>
+            </div>
+
+            <div class="mt-14 border-t border-white/10 pt-6 text-center text-xs text-white/60">
+                © <span id="year"></span> Pilates Vita. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS: mobile menu + year -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

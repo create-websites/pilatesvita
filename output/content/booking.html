@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking &mdash; Pilates Vita</title>
+  <meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" />
+  <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico" />
+  <link rel="canonical" href="https://www.pilatesvita.com/booking" />
+  <meta property="og:site_name" content="Pilates Vita" />
+  <meta property="og:title" content="Booking &mdash; Pilates Vita" />
+  <meta property="og:url" content="https://www.pilatesvita.com/booking" />
+  <meta property="og:type" content="website" />
+  <meta itemprop="name" content="Booking — Pilates Vita" />
+  <meta itemprop="url" content="https://www.pilatesvita.com/booking" />
+  <meta name="twitter:title" content="Booking — Pilates Vita" />
+  <meta name="twitter:url" content="https://www.pilatesvita.com/booking" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="description" content="" />
+  <link rel="preconnect" href="https://images.squarespace-cdn.com">
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="preconnect" href="https://p.typekit.net" crossorigin>
+  <!-- Shared Styles -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: "#9eb5c7", ink2: "#9eb5c7" },
+          fontFamily: { sans: ['Futura', 'Helvetica Neue', 'Arial', 'sans-serif'] },
+          boxShadow: { soft: "0 12px 40px rgba(158, 181, 199, 0.15)" }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900 font-sans">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-100">
+    <div class="mx-auto max-w-6xl px-4">
+      <!-- Logo centered on top -->
+      <div class="flex justify-center py-8">
+        <a href="./index.html">
+          <img src="./Pilates Vita -1_files/pilates-vita-logo.png" alt="Pilates Vita" class="h-16 w-auto" />
+        </a>
+      </div>
+
+      <!-- Desktop nav - centered below logo -->
+      <nav class="hidden md:flex items-center justify-center gap-8 pb-6 text-xs font-medium tracking-widest uppercase">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./booking.html">Booking</a>
+        <a class="nav-link" href="./sessions.html">Session Types</a>
+        <a class="nav-link" href="./reviews.html">Testimonials</a>
+
+        <!-- About dropdown -->
+        <div class="relative group">
+          <a class="nav-link cursor-pointer" href="./about.html">About</a>
+          <div
+            class="nav-dropdown invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full mt-2 w-56 bg-ink text-white overflow-hidden z-50">
+            <a class="block px-5 py-3 text-xs font-medium tracking-widest uppercase hover:bg-white/10 text-center"
+              href="./our-instructors-1.html">Our Instructors</a>
+            <a class="block px-5 py-3 text-xs font-medium tracking-widest uppercase hover:bg-white/10 text-center"
+              href="./studios.html">The Studio</a>
+            <a class="block px-5 py-3 text-xs font-medium tracking-widest uppercase hover:bg-white/10 text-center"
+              href="./about.html">Our Story</a>
+          </div>
+        </div>
+
+        <!-- What is Pilates dropdown -->
+        <div class="relative group">
+          <a class="nav-link cursor-pointer" href="javascript:void(0)">What Is Pilates?</a>
+          <div
+            class="nav-dropdown invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full mt-2 w-64 bg-ink text-white overflow-hidden z-50">
+            <a class="block px-5 py-3 text-xs font-medium tracking-widest uppercase hover:bg-white/10 text-center"
+              href="./introduction-to-pilates.html">Introduction to Pilates</a>
+            <a class="block px-5 py-3 text-xs font-medium tracking-widest uppercase hover:bg-white/10 text-center"
+              href="./seven-principles-of-pilates.html">Seven Principles of Pilates</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="./certification.html">Certification</a>
+        <a class="nav-link" href="./contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex justify-center pb-4">
+        <button id="menuBtn"
+          class="inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
+          aria-label="Open menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <div class="rounded-2xl border border-slate-200 bg-white shadow-soft overflow-hidden">
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./index.html">Home</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./booking.html">Booking</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./sessions.html">Session Types</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./reviews.html">Testimonials</a>
+
+          <div class="border-t border-slate-200"></div>
+          <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">About</div>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./about.html">About</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./our-instructors-1.html">Our Instructors</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./studios.html">The Studio</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./about.html">Our Story</a>
+
+          <div class="border-t border-slate-200"></div>
+          <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">What Is Pilates?</div>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./introduction-to-pilates.html">Introduction to Pilates</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./seven-principles-of-pilates.html">Seven Principles of Pilates</a>
+
+          <div class="border-t border-slate-200"></div>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./certification.html">Certification</a>
+          <a class="block px-4 py-3 text-sm font-medium hover:bg-slate-50 uppercase tracking-wide"
+            href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-white">
+      <div class="mx-auto max-w-4xl px-4 py-16">
+        <div class="rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
+          <div class="px-6 sm:px-10 py-10">
+            <div class="flex items-start justify-between gap-6 flex-col sm:flex-row">
+              <div>
+                <h1 class="text-3xl md:text-4xl font-semibold tracking-tight" style="color: #9eb5c7;">Booking</h1>
+                <p class="mt-3 text-slate-600">We only accept bookings via phone call, WhatsApp or email.</p>
+              </div>
+              <a href="./sessions.html"
+                class="btn-outline shrink-0 inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition">
+                VIEW SESSION TYPES
+              </a>
+            </div>
+
+            <div class="mt-8 space-y-5 text-slate-700 leading-relaxed">
+              <p>
+                At Pilates Vita, we take your goals and expectations seriously and therefore, only accept bookings via
+                phone call,
+                WhatsApp or email. This allows us to discuss your experience and personal aspirations, ensuring we
+                create a tailored plan
+                that aligns perfectly with your needs.
+              </p>
+
+              <div class="grid gap-4 sm:grid-cols-3 pt-2">
+                <div class="rounded-2xl border border-slate-200 p-4">
+                  <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">Phone</div>
+                  <div class="mt-2 font-semibold text-slate-900">+44 (0)7 833 123 833</div>
+                </div>
+                <div class="rounded-2xl border border-slate-200 p-4">
+                  <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">WhatsApp</div>
+                  <div class="mt-2 font-semibold text-slate-900">+44 (0)7 833 123 833</div>
+                </div>
+                <a href="mailto:patricia.patricia@mac.com"
+                  class="rounded-2xl border border-slate-200 p-4 hover:border-slate-300 hover:bg-slate-50 transition">
+                  <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">Email</div>
+                  <div class="mt-2 font-semibold text-slate-900 break-all">patricia.patricia@mac.com</div>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 rounded-3xl overflow-hidden shadow-soft ring-1 ring-slate-200">
+          <img src="./Pilates Vita -1_files/IMG_2461.jpeg" alt="Pilates Vita studio"
+            class="w-full h-[220px] sm:h-[280px] object-cover" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-ink2 text-white">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="grid gap-10 md:grid-cols-3 items-start">
+        <div class="md:col-span-1"></div>
+
+        <div class="md:col-span-1 text-center">
+          <img src="./Pilates Vita -1_files/pilates-vita-logo-200-white.png" alt="Pilates Vita"
+            class="mx-auto h-10 w-auto" />
+          <p class="mt-6 text-sm leading-relaxed text-white/90">
+            109 Gloucester Rd.<br />
+            South Kensington, SW7 4SS<br />
+            London, United Kingdom
+          </p>
+          <p class="mt-4 text-sm leading-relaxed text-white/90">
+            Phone: <a class="underline hover:no-underline" href="tel:07833123833">07833 123833</a><br />
+            WhatsApp: <a class="underline hover:no-underline" href="https://wa.me/447833123833" target="_blank"
+              rel="noreferrer">07833 123833</a><br />
+            Email: <a class="underline hover:no-underline" href="mailto:patricia.patricia@mac.com" target="_blank"
+              rel="noreferrer">patricia.patricia@mac.com</a><br /><br />
+            <a class="underline hover:no-underline" href="./policies.html">Booking &amp; Cancellation Policy</a>
+          </p>
+
+          <div class="mt-8 flex items-center justify-center gap-4">
+            <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
+              href="https://www.facebook.com/Pilates-Vita-London-UK-2692498114156033/" target="_blank" rel="noreferrer"
+              aria-label="Facebook">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M13.5 22v-8h2.7l.4-3H13.5V9.1c0-.9.2-1.5 1.5-1.5h1.6V5c-.3 0-1.4-.1-2.7-.1-2.6 0-4.4 1.6-4.4 4.6V11H7v3h2.5v8h4z" />
+              </svg>
+            </a>
+            <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
+              href="https://www.instagram.com//pilatesvitakensington" target="_blank" rel="noreferrer"
+              aria-label="Instagram">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z" />
+                <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+                <path d="M17.5 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+              </svg>
+            </a>
+            <a class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition"
+              href="mailto:patricia.patricia@mac.com" aria-label="Email">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm0 2-8 5L4 8h16z" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="mt-10 flex items-center justify-center gap-6">
+            <img src="./Pilates Vita -1_files/pilates-method-alliance-certified.gif" alt="PMA certified"
+              class="h-10 w-auto rounded bg-white/90 p-1" />
+            <img src="./Pilates Vita -1_files/selo.png" alt="Award badge" class="h-10 w-auto rounded bg-white/90 p-1" />
+            <img src="./Pilates Vita -1_files/review-us-google.jpg" alt="Review us on Google"
+              class="h-10 w-auto rounded bg-white/90 p-1" />
+          </div>
+        </div>
+
+        <div class="md:col-span-1"></div>
+      </div>
+
+      <div class="mt-14 border-t border-white/10 pt-6 text-center text-xs text-white/60">
+        © <span id="year"></span> Pilates Vita. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
