@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pilates Renaissance: Industry Report & Franchise Opportunity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #FDFCF8; /* Warm Off-white */
+            color: #333333;
+        }
+
+        /* Chart Container Strategy - Strict sizing for responsiveness */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F0EA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #A3B18A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #588157;
+        }
+
+        /* Utility for card hover effects */
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Active Nav State */
+        .nav-link.active {
+            color: #3A5A40;
+            border-bottom: 2px solid #3A5A40;
+            font-weight: 600;
+        }
+    </style>
+    <!-- Chosen Palette: Earthy & Calming 
+         Background: #FDFCF8 (Cream/Paper)
+         Primary Text: #333333 (Charcoal)
+         Accents: #A3B18A (Sage Green), #588157 (Forest Green), #DAD7CD (Stone)
+         Call to Action: #D4A373 (Muted Gold/Tan)
+    -->
+
+    <!-- Application Structure Plan:
+         1. Hero Section: Hook the user with high-level growth stats.
+         2. Sticky Nav: Easy access to key report sections (Market, Demographics, Business Model, Calculator).
+         3. Market Pulse (Trends): Line chart showing adoption growth over time.
+         4. The Evolving Consumer (Demographics): Interactive comparison of "Traditional" vs "New" demographics.
+         5. The Product (Modalities): Bar chart comparing Reformer vs Mat popularity/revenue.
+         6. The Business Case (Franchise): Profitability calculator and qualitative benefits.
+         Rationale: Moves from macro trends -> specific user data -> product details -> financial action.
+    -->
+    
+    <!-- Visualization & Content Choices:
+         1. Market Growth: Line Chart. Goal: Show upward trajectory. Interaction: Toggle timeframe.
+         2. Demographics: Doughnut Charts. Goal: Show diversity. Interaction: Hover for specific % breakdown.
+         3. Class Types: Horizontal Bar Chart. Goal: Highlight "Reformer" dominance.
+         4. ROI Calculator: Custom JS Input/Output. Goal: Personalize the investment potential.
+    -->
+    
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="sticky top-0 z-50 bg-[#FDFCF8]/95 backdrop-blur-md border-b border-[#DAD7CD] shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl mr-2">🧘‍♀️</span>
+                    <span class="font-bold text-xl tracking-tight text-[#3A5A40]">Pilates<span class="font-light">Insights</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#market-pulse" class="nav-link text-gray-600 hover:text-[#3A5A40] px-3 py-2 text-sm font-medium transition-colors" data-target="market-pulse">Market Trends</a>
+                    <a href="#demographics" class="nav-link text-gray-600 hover:text-[#3A5A40] px-3 py-2 text-sm font-medium transition-colors" data-target="demographics">Demographics</a>
+                    <a href="#modalities" class="nav-link text-gray-600 hover:text-[#3A5A40] px-3 py-2 text-sm font-medium transition-colors" data-target="modalities">Class Formats</a>
+                    <a href="#franchise-opportunity" class="nav-link text-gray-600 hover:text-[#3A5A40] px-3 py-2 text-sm font-medium transition-colors" data-target="franchise-opportunity">Franchise ROI</a>
+                </div>
+                <div class="md:hidden">
+                    <!-- Mobile menu button placeholder (simplified for single file) -->
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-[#3A5A40] focus:outline-none">
+                        ☰
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FDFCF8] border-t border-[#DAD7CD]">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#market-pulse" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#3A5A40] hover:bg-[#DAD7CD]/20 rounded-md">Market Trends</a>
+                <a href="#demographics" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#3A5A40] hover:bg-[#DAD7CD]/20 rounded-md">Demographics</a>
+                <a href="#modalities" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#3A5A40] hover:bg-[#DAD7CD]/20 rounded-md">Class Formats</a>
+                <a href="#franchise-opportunity" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#3A5A40] hover:bg-[#DAD7CD]/20 rounded-md">Franchise ROI</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-[#3A5A40] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
+                The New Era of Mindful Movement
+            </h1>
+            <p class="max-w-2xl mx-auto text-xl text-[#DAD7CD] mb-8">
+                Analyzing the global surge in Pilates adoption, the shift in consumer demographics, and the compelling case for studio franchising.
+            </p>
+            
+            <!-- Quick Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition duration-300 cursor-default">
+                    <div class="text-3xl font-bold text-[#D4A373] mb-1">11.7%</div>
+                    <div class="text-sm text-[#F1F0EA] font-medium uppercase tracking-wider">CAGR (2023-2030)</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition duration-300 cursor-default">
+                    <div class="text-3xl font-bold text-[#D4A373] mb-1">$215B+</div>
+                    <div class="text-sm text-[#F1F0EA] font-medium uppercase tracking-wider">Projected Market Cap</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition duration-300 cursor-default">
+                    <div class="text-3xl font-bold text-[#D4A373] mb-1">12M+</div>
+                    <div class="text-sm text-[#F1F0EA] font-medium uppercase tracking-wider">Active Practitioners</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- SECTION 1: MARKET PULSE -->
+        <section id="market-pulse" class="scroll-mt-24">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-4 space-y-4">
+                    <h2 class="text-3xl font-bold text-[#333]">Market Pulse</h2>
+                    <div class="h-1 w-20 bg-[#D4A373] rounded"></div>
+                    <p class="text-gray-600 leading-relaxed">
+                        The global Pilates market is experiencing a "Post-Pandemic Renaissance." Unlike high-intensity interval training which saw volatility, low-impact, sustainable fitness has seen a steady, steep upward trajectory.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        <strong>Key Insight:</strong> The shift is driven by a desire for longevity, functional movement, and mental health benefits intertwined with physical fitness.
+                    </p>
+                    <div class="bg-[#F1F0EA] p-4 rounded-lg border-l-4 border-[#3A5A40] mt-4">
+                        <p class="text-sm font-medium text-[#3A5A40]">
+                            "Pilates is no longer a niche practice for dancers; it is becoming the foundational workout for the general population."
+                        </p>
+                    </div>
+                </div>
+                <div class="md:col-span-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover-card">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-lg font-semibold text-gray-800">Global Market Growth Projection</h3>
+                            <select id="trend-timeframe" class="bg-[#F1F0EA] text-sm text-gray-700 p-2 rounded border border-gray-300 focus:outline-none focus:border-[#3A5A40]">
+                                <option value="forecast">5-Year Forecast</option>
+                                <option value="historical">Historical Context</option>
+                            </select>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="marketChart"></canvas>
+                        </div>
+                        <p class="text-xs text-gray-500 text-center mt-4">Source: Simulated Global Wellness Institute Data</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DEMOGRAPHICS -->
+        <section id="demographics" class="scroll-mt-24 bg-white -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-12 shadow-sm">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-[#333]">The Shifting Demographic</h2>
+                    <p class="text-gray-600 mt-4">
+                        The stereotype of Pilates being exclusive to "affluent women over 40" is shattering. 
+                        We are seeing a rapid diversification in gender and age, opening up vast new addressable markets for franchise owners.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Gender Breakdown -->
+                    <div class="bg-[#FDFCF8] p-6 rounded-xl border border-gray-100">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Gender Participation</h3>
+                        <p class="text-sm text-gray-500 text-center mb-6">Men are the fastest-growing segment (+15% YoY)</p>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="genderChart"></canvas>
+                        </div>
+                        <div class="mt-6 grid grid-cols-2 gap-4 text-center">
+                            <div class="p-3 bg-[#F1F0EA] rounded">
+                                <div class="text-2xl font-bold text-[#3A5A40]">78%</div>
+                                <div class="text-xs text-gray-600 uppercase">Female</div>
+                            </div>
+                            <div class="p-3 bg-[#E8EDDF] rounded">
+                                <div class="text-2xl font-bold text-[#D4A373]">22%</div>
+                                <div class="text-xs text-gray-600 uppercase">Male & Other</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Age Breakdown -->
+                    <div class="bg-[#FDFCF8] p-6 rounded-xl border border-gray-100">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Age Distribution</h3>
+                        <p class="text-sm text-gray-500 text-center mb-6">Gen Z and Millennials now drive 55% of bookings</p>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="ageChart"></canvas>
+                        </div>
+                         <div class="mt-6 p-4 bg-[#F1F0EA] rounded text-sm text-gray-600">
+                             <strong>Insight:</strong> The "Clinical" aspect appeals to the 60+ demographic for rehabilitation, while the "Sculpt" aspect appeals to the 20-30 demographic for aesthetics.
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: CLASS FORMATS & BUSINESS MODEL -->
+        <section id="modalities" class="scroll-mt-24">
+            <div class="grid md:grid-cols-12 gap-8">
+                <!-- Text Context -->
+                <div class="md:col-span-5 space-y-6">
+                    <h2 class="text-3xl font-bold text-[#333]">Mat vs. Reformer</h2>
+                    <div class="h-1 w-20 bg-[#D4A373] rounded"></div>
+                    <p class="text-gray-600">
+                        Understanding the "Product" is crucial for franchise success. While Mat Pilates is accessible, <strong>Reformer Pilates</strong> is the economic engine of modern studios.
+                    </p>
+                    
+                    <ul class="space-y-4 mt-6">
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-6 w-6 rounded-full bg-[#3A5A40] flex items-center justify-center text-white text-xs mr-3">✓</span>
+                            <span class="text-gray-700 text-sm"><strong>Retention:</strong> Reformer equipment creates a "barrier to entry" for home workouts, keeping members paying for studio access.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-6 w-6 rounded-full bg-[#3A5A40] flex items-center justify-center text-white text-xs mr-3">✓</span>
+                            <span class="text-gray-700 text-sm"><strong>Price Power:</strong> Reformer classes command a 40-60% premium over standard group fitness.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 h-6 w-6 rounded-full bg-[#3A5A40] flex items-center justify-center text-white text-xs mr-3">✓</span>
+                            <span class="text-gray-700 text-sm"><strong>Hybrid Models:</strong> Successful franchises now offer "Cardio Pilates" to compete with HIIT studios.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Chart -->
+                <div class="md:col-span-7">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Revenue Contribution by Class Type</h3>
+                        <div class="chart-container">
+                            <canvas id="modalityChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: FRANCHISE CALCULATOR -->
+        <section id="franchise-opportunity" class="scroll-mt-24 bg-[#3A5A40] rounded-2xl shadow-xl overflow-hidden text-white">
+            <div class="grid md:grid-cols-2">
+                <div class="p-8 md:p-12 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold mb-4">Why Open a Franchise?</h2>
+                    <p class="text-[#DAD7CD] mb-8">
+                        Pilates studios offer a unique "High Yield, Low Footprint" real estate model. Compared to big-box gyms, they require less square footage and have lower equipment maintenance costs.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border border-[#DAD7CD]/30 p-4 rounded-lg">
+                            <div class="text-2xl mb-2">⏱️</div>
+                            <h4 class="font-bold">45-50 Min</h4>
+                            <p class="text-xs text-[#DAD7CD]">Optimized turnover time per class</p>
+                        </div>
+                        <div class="border border-[#DAD7CD]/30 p-4 rounded-lg">
+                            <div class="text-2xl mb-2">🔄</div>
+                            <h4 class="font-bold">Recurring</h4>
+                            <p class="text-xs text-[#DAD7CD]">Membership-based revenue model</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white text-gray-800 p-8 md:p-12">
+                    <h3 class="text-xl font-bold text-[#3A5A40] mb-6">Estimate Your Potential</h3>
+                    
+                    <div class="space-y-4">
+                        <!-- Input: Active Members -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Projected Active Members</label>
+                            <input type="range" id="calc-members" min="50" max="500" value="200" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#3A5A40]">
+                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>50</span>
+                                <span id="val-members" class="font-bold text-[#3A5A40]">200</span>
+                                <span>500</span>
+                            </div>
+                        </div>
+
+                        <!-- Input: Avg Price -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Avg. Monthly Membership Fee ($)</label>
+                            <div class="relative rounded-md shadow-sm">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <span class="text-gray-500 sm:text-sm">$</span>
+                                </div>
+                                <input type="number" id="calc-price" value="180" class="focus:ring-[#3A5A40] focus:border-[#3A5A40] block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md p-2 border" placeholder="0.00">
+                            </div>
+                        </div>
+
+                        <!-- Input: Rent/Overhead -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Est. Monthly Overhead (Rent, Staff) ($)</label>
+                            <div class="relative rounded-md shadow-sm">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <span class="text-gray-500 sm:text-sm">$</span>
+                                </div>
+                                <input type="number" id="calc-overhead" value="12000" class="focus:ring-[#3A5A40] focus:border-[#3A5A40] block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md p-2 border" placeholder="0.00">
+                            </div>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="border-t border-gray-200 my-4"></div>
+
+                        <!-- Result -->
+                        <div class="bg-[#F1F0EA] p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-sm font-medium text-gray-600">Monthly Gross Revenue:</span>
+                                <span id="res-revenue" class="font-bold text-gray-800">$36,000</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-base font-bold text-[#3A5A40]">Est. Monthly Net Profit:</span>
+                                <span id="res-profit" class="text-xl font-extrabold text-[#3A5A40]">$24,000</span>
+                            </div>
+                            <p class="text-[10px] text-gray-400 mt-2 text-right">*Estimates only. Not financial advice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-gray-200 pt-8 pb-12 mt-12 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; 2024 PilatesInsights Report. Generated for educational purposes.
+            </p>
+            <div class="flex justify-center space-x-6 mt-4 opacity-50">
+                <span class="text-2xl">🧘</span>
+                <span class="text-2xl">📊</span>
+                <span class="text-2xl">🌱</span>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- 1. Data Store (Simulated Source Report Data) ---
+        const reportData = {
+            trends: {
+                labels: ['2019', '2020', '2021', '2022', '2023', '2024 (Est)', '2025 (Proj)'],
+                data: [120, 95, 110, 145, 180, 215, 245], // Market size index
+                historical: [120, 95, 110, 145, 180, 215, 245]
+            },
+            demographics: {
+                gender: {
+                    labels: ['Female', 'Male', 'Non-Binary'],
+                    data: [78, 20, 2]
+                },
+                age: {
+                    labels: ['Gen Z (16-26)', 'Millennials (27-42)', 'Gen X (43-58)', 'Boomers (59+)'],
+                    data: [22, 33, 28, 17]
+                }
+            },
+            modalities: {
+                labels: ['Mat Pilates', 'Reformer', 'Hybrid/Cardio', 'Clinical/Rehab'],
+                revenueShare: [20, 55, 15, 10], // % of studio revenue
+                colors: ['#DAD7CD', '#3A5A40', '#A3B18A', '#588157']
+            }
+        };
+
+        // --- 2. Chart Configurations ---
+        
+        // Common Options for consistent styling
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: { font: { family: 'Outfit', size: 12 }, padding: 20, boxWidth: 12 }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(58, 90, 64, 0.9)',
+                    titleFont: { family: 'Outfit', size: 13 },
+                    bodyFont: { family: 'Outfit', size: 12 },
+                    padding: 12,
+                    cornerRadius: 8,
+                    displayColors: false
+                }
+            }
+        };
+
+        // Initialize Charts on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- A. Market Trend Chart (Line) ---
+            const ctxMarket = document.getElementById('marketChart').getContext('2d');
+            const marketChart = new Chart(ctxMarket, {
+                type: 'line',
+                data: {
+                    labels: reportData.trends.labels,
+                    datasets: [{
+                        label: 'Market Index (Billions USD)',
+                        data: reportData.trends.data,
+                        borderColor: '#3A5A40',
+                        backgroundColor: 'rgba(58, 90, 64, 0.1)',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#D4A373',
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            grid: { borderDash: [5, 5], color: '#f0f0f0' },
+                            ticks: { font: { family: 'Outfit' } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { family: 'Outfit' } }
+                        }
+                    }
+                }
+            });
+
+            // Trend Filter Interaction
+            document.getElementById('trend-timeframe').addEventListener('change', (e) => {
+                if(e.target.value === 'forecast') {
+                    // Show full projection
+                    marketChart.data.labels = reportData.trends.labels;
+                    marketChart.data.datasets[0].data = reportData.trends.historical;
+                } else {
+                    // Show only historical (up to 2023)
+                    marketChart.data.labels = reportData.trends.labels.slice(0, 5);
+                    marketChart.data.datasets[0].data = reportData.trends.historical.slice(0, 5);
+                }
+                marketChart.update();
+            });
+
+            // --- B. Demographics Charts (Doughnut) ---
+            
+            // Gender
+            const ctxGender = document.getElementById('genderChart').getContext('2d');
+            new Chart(ctxGender, {
+                type: 'doughnut',
+                data: {
+                    labels: reportData.demographics.gender.labels,
+                    datasets: [{
+                        data: reportData.demographics.gender.data,
+                        backgroundColor: ['#3A5A40', '#D4A373', '#DAD7CD'],
+                        borderWidth: 0,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    cutout: '70%',
+                    plugins: {
+                        ...commonOptions.plugins,
+                        legend: { position: 'bottom' } // Override position
+                    }
+                }
+            });
+
+            // Age
+            const ctxAge = document.getElementById('ageChart').getContext('2d');
+            new Chart(ctxAge, {
+                type: 'bar', // Changed to Bar for better age distribution visual
+                data: {
+                    labels: reportData.demographics.age.labels,
+                    datasets: [{
+                        label: '% of Membership Base',
+                        data: reportData.demographics.age.data,
+                        backgroundColor: '#A3B18A',
+                        borderRadius: 6,
+                        hoverBackgroundColor: '#3A5A40'
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    scales: {
+                        y: { display: false, grid: { display: false } },
+                        x: { grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+
+            // --- C. Modality Chart (Horizontal Bar) ---
+            const ctxModality = document.getElementById('modalityChart').getContext('2d');
+            new Chart(ctxModality, {
+                type: 'bar',
+                indexAxis: 'y',
+                data: {
+                    labels: reportData.modalities.labels,
+                    datasets: [{
+                        label: 'Revenue Contribution (%)',
+                        data: reportData.modalities.revenueShare,
+                        backgroundColor: reportData.modalities.colors,
+                        borderRadius: 4,
+                        barThickness: 25
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    scales: {
+                        x: { max: 100, grid: { borderDash: [2, 2] } },
+                        y: { grid: { display: false } }
+                    }
+                }
+            });
+
+            // --- 3. Calculator Logic ---
+            const els = {
+                members: document.getElementById('calc-members'),
+                price: document.getElementById('calc-price'),
+                overhead: document.getElementById('calc-overhead'),
+                dispMembers: document.getElementById('val-members'),
+                outRev: document.getElementById('res-revenue'),
+                outProfit: document.getElementById('res-profit')
+            };
+
+            function updateCalculator() {
+                const members = parseInt(els.members.value);
+                const price = parseFloat(els.price.value) || 0;
+                const overhead = parseFloat(els.overhead.value) || 0;
+
+                // Logic
+                const grossRev = members * price;
+                const netProfit = grossRev - overhead;
+
+                // Update UI
+                els.dispMembers.textContent = members;
+                els.outRev.textContent = '$' + grossRev.toLocaleString();
+                els.outProfit.textContent = '$' + netProfit.toLocaleString();
+
+                // Simple visual cue for negative profit
+                if(netProfit < 0) {
+                    els.outProfit.classList.remove('text-[#3A5A40]');
+                    els.outProfit.classList.add('text-red-500');
+                } else {
+                    els.outProfit.classList.remove('text-red-500');
+                    els.outProfit.classList.add('text-[#3A5A40]');
+                }
+            }
+
+            // Listeners
+            els.members.addEventListener('input', updateCalculator);
+            els.price.addEventListener('input', updateCalculator);
+            els.overhead.addEventListener('input', updateCalculator);
+            
+            // Init Calc
+            updateCalculator();
+
+
+            // --- 4. Navigation & Smooth Scroll Highlighting ---
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Mobile Menu Toggle
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // ScrollSpy
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-target') === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
