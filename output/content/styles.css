@@ -148,13 +148,19 @@ header nav svg {
   color: #1a1a2e;
 }
 
-/* Links */
-a {
+/* Text Hyperlinks (Sitewide) */
+a.text-link,
+main a:not(.btn-outline):not(.nav-link) {
   color: #9eb5c7;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+  opacity: 1;
 }
 
-a:hover {
-  color: #7a9ab3;
+a.text-link:hover,
+main a:not(.btn-outline):not(.nav-link):hover {
+  opacity: 0.6;
 }
 
 /* Accordion buttons */
